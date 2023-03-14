@@ -11,6 +11,7 @@
     <modules>
         <module>Array</module>
         <module>LinkList</module>
+        <module>String</module>
     </modules>
 
     <properties>
