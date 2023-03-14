@@ -7,6 +7,9 @@ package com.xin.reverse;
  * @Date 2023/03/10
  */
 public class Solution151 {
+
+    private final Character space = ' ';
+
     public String reverseWords(String s) {
         char[] chars = s.toCharArray();
         int n = chars.length;
@@ -14,12 +17,12 @@ public class Solution151 {
         int i, j = 0;
         while (j < n) {
             // 跳过单词间的空格
-            while (j < n && chars[j] == ' ') {
+            while (j < n && chars[j] == space) {
                 j++;
             }
             i = j;
             // 找到下一个单词的末尾位置
-            while (j < n && chars[j] != ' ') {
+            while (j < n && chars[j] != space) {
                 j++;
             }
             // 反转当前单词
@@ -43,20 +46,20 @@ public class Solution151 {
         int n = chars.length;
         while (j < n) {
             // 跳过单词间的空格
-            while (j < n && chars[j] == ' ') {
+            while (j < n && chars[j] == space) {
                 j++;
             }
             // 复制当前单词
-            while (j < n && chars[j] != ' ') {
+            while (j < n && chars[j] != space) {
                 chars[i++] = chars[j++];
             }
             // 跳过单词末尾的空格
-            while (j < n && chars[j] == ' ') {
+            while (j < n && chars[j] == space) {
                 j++;
             }
             // 如果还有单词，添加一个空格
             if (j < n) {
-                chars[i++] = ' ';
+                chars[i++] = space;
             }
         }
         return new String(chars, 0, i);
