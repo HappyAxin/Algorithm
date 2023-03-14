@@ -1,4 +1,4 @@
-package com.xin.virtual;
+package com.xin.dummyhead;
 
 
 import com.xin.ListNode;
