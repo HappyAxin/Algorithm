@@ -11,7 +11,7 @@ public class Solution151 {
         char[] chars = s.toCharArray();
         int n = chars.length;
         reverse(chars, 0, n - 1);
-        int i = 0, j = 0;
+        int i, j = 0;
         while (j < n) {
             // 跳过单词间的空格
             while (j < n && chars[j] == ' ') {
