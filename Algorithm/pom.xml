@@ -12,6 +12,7 @@
         <module>Array</module>
         <module>LinkList</module>
         <module>String</module>
+        <module>Map</module>
     </modules>
 
     <properties>
