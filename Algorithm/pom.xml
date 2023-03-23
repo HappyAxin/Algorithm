@@ -14,6 +14,7 @@
         <module>String</module>
         <module>Map</module>
         <module>Stack_Quene</module>
+        <module>BinaryTree</module>
     </modules>
 
     <properties>
