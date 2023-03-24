@@ -4,7 +4,6 @@ import com.xin.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * @author Hu·YX
@@ -14,23 +13,17 @@ import java.util.Stack;
  */
 public class Solution145 {
     public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
-        if (root == null) {
-            return result;
+        List<Integer> res = new ArrayList<>();
+        postorderHelper(root, res);
+        return res;
+    }
+
+    private void postorderHelper(TreeNode node, List<Integer> res) {
+        if (node == null) {
+            return;
         }
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            // 将节点值插入到结果集的开头
-            result.add(0, node.val);
-            if (node.left != null) {
-                stack.push(node.left);
-            }
-            if (node.right != null) {
-                stack.push(node.right);
-            }
-        }
-        return result;
+        postorderHelper(node.left, res);
+        postorderHelper(node.right, res);
+        res.add(node.val);
     }
 }
