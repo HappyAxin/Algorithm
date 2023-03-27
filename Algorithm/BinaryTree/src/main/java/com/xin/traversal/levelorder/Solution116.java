@@ -18,7 +18,7 @@ public class Solution116 {
         }
         Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
-        while (!queue.isEmpty()) {
+        while (! queue.isEmpty()) {
             int size = queue.size();
             // 上一个节点
             Node prev = null;
