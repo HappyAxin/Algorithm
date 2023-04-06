@@ -26,6 +26,11 @@ public class Node {
         val = _val;
     }
 
+    public Node(int _val, List<Node> _children) {
+        val = _val;
+        children = _children;
+    }
+
     public Node(int _val, Node _left, Node _right, Node _next, List<Node> _children) {
         val = _val;
         left = _left;
