@@ -13,7 +13,7 @@
         <module>LinkList</module>
         <module>String</module>
         <module>Map</module>
-        <module>Stack_Quene</module>
+        <module>Stack_Queue</module>
         <module>BinaryTree</module>
     </modules>
 

@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Stack_Quene</artifactId>
+    <artifactId>Stack_Queue</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
