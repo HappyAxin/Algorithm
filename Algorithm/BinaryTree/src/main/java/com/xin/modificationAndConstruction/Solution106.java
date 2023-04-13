@@ -22,7 +22,7 @@ public class Solution106 {
             map.put(inorder[i], i);
         }
         // 调用递归函数构建二叉树
-        return buildTreeHelper(inorder, postorder,map, 0, inorder.length - 1, 0, postorder.length - 1);
+        return buildTreeHelper(inorder, postorder, map, 0, inorder.length - 1, 0, postorder.length - 1);
     }
 
     private TreeNode buildTreeHelper(int[] inorder, int[] postorder, Map<Integer, Integer> map,
