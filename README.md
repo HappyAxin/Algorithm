@@ -350,3 +350,226 @@
 
 1. 判断是否有环，并找到相遇点（快慢指针）
 2. 找到环的起点（使用一个新指针从链表头部开始遍历，同时从相遇点开始遍历，直到两个指针相遇）
+
+# 哈希表
+
+## 数组作为哈希表
+
+### 242. 有效的字母异位词
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution242.java)
+
+#### 思路：
+
+先使用哈希表记录字符串 s 中每个字符出现的次数，然后再遍历字符串 t，对于每个字符，将其在哈希表中对应的次数减一。
+
+如果哈希表中某个字符的次数小于 0，说明 t 包含一个不在 s 中的额外字符，不是 s 的字母异位词。
+
+如果遍历完 t 后哈希表中所有字符的次数都大于等于 0，说明 t 是 s 的字母异位词。
+
+### 383.  赎金信
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution383.java)
+
+#### 思路：
+
+先统计 magazine 中每个字符出现的次数，然后遍历 ransomNote 中的字符，检查其在 magazine 中出现的次数是否大于等于 ransomNote 中出现的次数。
+
+**具体地**，可以用一个长度为 26 的数组来记录 magazine 中每个字符出现的次数。遍历 magazine 中的每个字符，将其对应的计数器加 1。然后遍历 ransomNote 中的每个字符，将其对应的计数器减 1，如果计数器小于 0，说明 magazine 中没有足够的字符来构成 ransomNote，返回 false。
+
+### 49. 字母异位词分组
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution49.java)
+
+#### 思路：
+
+将每个单词按照字母顺序排序后作为键存储在哈希表中，值为所有字母顺序相同的单词的列表。
+
+具体来说，对于每个单词，将其按照字母顺序排序后作为键，如果该键在哈希表中不存在，则将该键加入哈希表，并将该单词加入值为一个空列表的键所对应的值中。如果该键已经存在，则将该单词加入该键所对应的值中。最后，将所有值非空的键所对应的值加入结果列表中即可。
+
+#### 438. 找到字符串中所有字母异位词
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution438.java)
+
+#### 思路：
+
+具体来说，可以先用一个哈希表来记录模式串中每个字符出现的次数，然后用两个指针 left 和 right 表示滑动窗口的左右端点。一开始，两个指针都指向 s 的起始位置。然后，不断地增加 right 指针扩大窗口，直到窗口大小等于 p 的长度为止。在扩大窗口的过程中，每当窗口内的字符满足条件（即窗口内的字符出现次数等于模式串中的字符出现次数）时，就将窗口的左端点作为一个答案加入结果集。接下来，移动左指针并缩小窗口，直到窗口内的字符不再满足条件为止，然后再增加 right 指针扩大窗口，如此往复直到 right 指针到达 s 的末尾。
+
+具体实现时，可以用两个数组来记录当前窗口内每个字符出现的次数，一个是 window，用于记录当前窗口内的字符出现次数，另一个是 needs，用于记录模式串中的字符出现次数。每次增加 right 指针扩大窗口时，更新 window 数组；每次移动 left 指针并缩小窗口时，同样要更新 window 数组。需要注意的是，当窗口大小超过 p 的长度时，需要移动 left 指针并缩小窗口。
+
+最终，将所有的答案返回即可。
+
+## set作为哈希表
+
+### 349. 两个数组的交集
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/set/Solution349.java)
+
+#### 思路：
+
+首先，我们将一个数组中的元素添加到哈希表中，然后遍历另一个数组，检查它们是否在哈希表中出现过，如果出现过，就加入到结果集合中。
+
+### 350. 两个数组的交集 II
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/set/Solution350.java)
+
+#### 思路：
+
+首先遍历 nums1，将每个数字出现的次数记录在哈希表中。然后遍历 nums2，对于每个数字，如果它在哈希表中出现过，就将它加入答案，并将哈希表中的计数减 1。
+
+具体步骤如下：
+
+1. 遍历 nums1，将每个数字及其出现次数记录在哈希表中。
+2. 遍历 nums2，对于每个数字，如果它在哈希表中出现过，就将它加入答案，并将哈希表中的计数减 1。
+3. 返回答案数组。
+
+#### 202. 快乐数
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/set/Solution202.java)
+
+#### 思路：
+
+首先定义一个Set集合用于存储每次计算的结果，用于判断是否进入了循环。
+
+然后使用getNext方法，计算n每个位置上的数字的平方和，得到下一个数。
+
+如果下一个数等于1，说明n是快乐数，直接返回true。
+
+如果下一个数已经在Set集合中出现过，说明进入了循环，直接返回false。
+
+如果都不是，则将下一个数加入Set集合中，并将下一个数作为新的n继续计算。
+
+## map作为哈希表
+
+### 1. 两数之和
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/map/Solution1.java)
+
+#### 思路：
+
+遍历一遍数组，对于每个数，判断它的差值（即 target - nums[i]）是否在哈希表中出现过，如果出现过，说明找到了这两个数，直接返回它们的下标即可。如果没有找到，就将这个数存入哈希表中，继续遍历下一个数。
+
+### 454. 四数相加II
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/map/Solution454.java)
+
+#### 思路：
+
+先遍历 `nums1` 和 `nums2`，将两个数组中所有数的和及其出现的次数存储在哈希表 `sums` 中。然后遍历 `nums3` 和 `nums4`，对于每一对数，如果它们的相反数在 `sums` 中出现过，就将 `sums` 中该数的出现次数累加到答案中。最后返回答案即可。
+
+## 双指针
+
+### 15. 三数之和
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/doublepointer/Solution15.java)
+
+#### 思路：
+
+首先将数组排序，然后枚举第一个数，使用双指针在剩余的数中寻找符合条件的另外两个数。
+
+具体来说，我们先将给定的数组排序，然后从小到大枚举第一个数，再使用双指针枚举剩下两个数，指针初始位置分别为第一个数的右侧和数组末尾。
+
+如果三个数的和等于 0，则将这三个数添加到答案中。如果三个数的和小于 0，则将左侧指针右移一位。如果三个数的和大于 0，则将右侧指针左移一位。当枚举完成后，返回得到的答案即可。
+
+### 18.四数之和
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/doublepointer/Solution18.java)
+
+#### 思路：
+
+可以将四数之和转化为三数之和的问题，具体步骤如下：
+
+1. 对原数组排序。
+2. 确定第一个数的位置 i，从 0 开始遍历到 n-4。
+3. 对第一个数之后的数组 nums[i+1..n-1] 执行三数之和，目标值为 target - nums[i]。
+4. 如果三数之和的解为 [nums[i], nums[j], nums[k]]，则将该解添加到结果中。
+5. 注意去重，避免出现重复的解。
+
+# 字符串
+
+## 双指针
+
+### 344.反转字符串
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/doublepointer/Solution344.java)
+
+#### 思路：
+
+1. 定义两个指针left和right，分别指向字符串s的起始和末尾位置；
+2. 当left小于right时，交换s[left]和s[right]；
+3. left加1，right减1，重复步骤2，直到left>=right。
+
+### 541.反转字符串II
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/doublepointer/Solution541.java)
+
+#### 思路：
+
+从字符串开头开始，每计数至 2k 个字符，就反转这 2k 字符中的前 k 个字符。
+
+具体来说，可以使用一个循环，每次处理 2k 个字符。对于每个 2k 长度的子串，我们先反转前 k 个字符，然后判断剩余字符的数量，若不足 k 个，则将剩余字符全部反转，否则只反转前 k 个字符。循环处理直至处理完整个字符串。
+
+### 剑指Offer 05.替换空格
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/doublepointer/Offer05.java)
+
+#### 思路：
+
+可以先遍历一遍字符串，计算出空格的数量，然后根据空格数量算出替换后字符串的长度，再从后往前遍历字符串，将字符从后往前依次复制到替换后的位置上。
+
+具体步骤如下：
+
+1. 统计空格数量，计算替换后字符串的长度
+
+2. 定义两个指针，分别指向原字符串和替换后的字符串的末尾，然后从后往前遍历原字符串：
+
+	a. 如果当前字符不是空格，则将其复制到替换后字符串的指针所指向的位置上，并将两个指针都向前移动一位；
+
+	b. 如果当前字符是空格，则将"%20"复制到替换后字符串的指针所指向的位置上，并将替换后字符串的指针向前移动三位，原字符串的指针向前移动一位。
+
+3. 返回替换后的字符串
+
+## 反转
+
+### 151.反转字符串中的单词
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/reverse/Solution151.java)
+
+#### 思路：
+
+可以先将字符串去除前导和尾随空格，然后按照空格分割成单词数组，最后将单词数组倒序拼接即可。
+
+### 剑指 Offer 58 - II. 左旋转字符串
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/reverse/Offer58II.java)
+
+#### 思路：
+
+可以先将原字符串分为两部分，即要左旋转的部分和剩余部分，然后分别翻转这两部分，最后再将整个字符串翻转一次即可。具体步骤如下：
+
+1. 将字符串 s 分为两部分，即要左旋转的部分和剩余部分，分别为 s1 和 s2。s1 包含前 n 个字符，s2 包含剩余字符，即 s1 = s[0:n]，s2 = s[n:len(s)]。
+2. 翻转字符串 s1 和 s2，得到 s1' 和 s2'。翻转字符串的方法可以使用双指针，从两端往中间移动，依次交换字符。
+3. 将 s1' 和 s2' 拼接成新的字符串 s'，即 s' = s1' + s2'。
+4. 翻转字符串 s'，得到最终结果。
+
+## KMP
+
+### 28.找出字符串中第一个匹配项的下标
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/kmp/Solution28.java)
+
+#### 思路：
+
+1. 首先判断特殊情况，如果 `needle` 为空字符串，则返回 0。
+2. 对于 `haystack` 中的每个字符，从当前位置开始，与 `needle` 中的字符逐一比较。
+3. 如果 `needle` 中的所有字符都匹配成功，则返回当前位置。如果 `haystack` 中的字符不足以与 `needle` 中的所有字符比较，则返回 -1。
+
+### 459.重复的子字符串
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/kmp/Solution459.java)
+
+#### 思路：
+
+如果一个字符串可以由一个子串重复多次构成，那么这个子串的长度一定是原字符串长度的因数，并且除了原字符串本身以外，这个子串在原字符串中不会出现。因此，我们可以枚举所有可能的子串长度，对于每个子串长度，判断它是否满足上述两个条件。
+
+具体地，假设原字符串为s，长度为n，我们从小到大枚举i（i为子串长度），如果i是n的因数，那么我们将原字符串分割成 n/i 个长度为 i 的子串。如果这 n/i 个子串都相等，并且它们的值恰好为原字符串 s，那么我们就找到了符合要求的子串。
