@@ -1,6 +1,6 @@
 # Algorithm
 
-LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://www.programmercarl.com/)来的
+LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://www.programmercarl.com/)来的。
 
 # 数组
 
