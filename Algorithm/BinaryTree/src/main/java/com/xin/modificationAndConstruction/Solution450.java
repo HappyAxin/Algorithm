@@ -26,7 +26,7 @@ public class Solution450 {
                 TreeNode successor = getMin(root.right);
                 root.val = successor.val;
                 root.right = deleteNode(root.right, successor.val);
-            }else {
+            } else {
                 // 情况 2：要删除的节点只有一个子节点
                 root = root.left != null ? root.left : root.right;
             }
@@ -36,7 +36,8 @@ public class Solution450 {
 
     /**
      * 获取以 root 为根节点的子树中的最小节点
-     * @param root  root
+     *
+     * @param root root
      * @return TreeNode
      */
     private TreeNode getMin(TreeNode root) {
