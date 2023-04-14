@@ -15,6 +15,7 @@
         <module>Map</module>
         <module>Stack_Queue</module>
         <module>BinaryTree</module>
+        <module>Backtrack</module>
     </modules>
 
     <properties>
