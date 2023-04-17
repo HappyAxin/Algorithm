@@ -20,7 +20,13 @@ public class Solution77 {
             res.add(new ArrayList<>(cur));
             return;
         }
-        for (int i = start; i <= n; i ++) {
+
+        // 如果剩余可选的数字数量不足以组成一个组合，就返回
+        if (n - start + 1 < k - cur.size()) {
+            return;
+        }
+
+        for (int i = start; i <= n; i++) {
             cur.add(i);
             backtrack(res, cur, n, k, i + 1);
             cur.remove(cur.size() - 1);
