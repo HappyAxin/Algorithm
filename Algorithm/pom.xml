@@ -16,6 +16,7 @@
         <module>Stack_Queue</module>
         <module>BinaryTree</module>
         <module>Backtrack</module>
+        <module>Sort</module>
     </modules>
 
     <properties>
