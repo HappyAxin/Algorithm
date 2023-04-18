@@ -1,5 +1,10 @@
 package com.xin.selectsort;
 
+/**
+ * @author Hu·YX
+ * @Description 堆排序
+ * @Date 2023/04/18
+ */
 public class HeapSort {
     public static void heapSort(int[] arr) {
         int n = arr.length;
