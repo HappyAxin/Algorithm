@@ -2,6 +2,355 @@
 
 LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://www.programmercarl.com/)来的。
 
+# 排序
+
+## 交换排序
+
+### 冒泡排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/swapsort/BubbleSort.java)
+
+#### 思路
+
+冒泡排序（Bubble Sort）是一种简单的排序算法，它的基本思想是通过不断交换相邻的元素将未排序的最大（或最小）元素逐渐“浮”到数组的末尾（或开头）。具体来说，冒泡排序的算法步骤如下：
+
+1. 从数组的第一个元素开始，依次比较相邻的两个元素，如果前一个元素比后一个元素大，则交换它们的位置。
+2. 继续向后比较相邻的两个元素，直到比较到倒数第二个元素为止。此时，数组的最后一个元素应该是未排序中的最大（或最小）元素。
+3. 重复步骤1和步骤2，每次将未排序中的最大（或最小）元素“浮”到数组的末尾（或开头），直到所有元素都已排序。
+
+使用了两层循环，外层循环控制排序的趟数，内层循环控制每一趟排序的比较次数。如果相邻的两个元素大小关系不符合要求，就进行交换。最终，通过多趟排序，可以将数组按照从小到大（或从大到小）的顺序排列。
+
+对于某些输入数据，冒泡排序只需要经过一部分排序就可以完成，可以记录最后一次交换的位置，来减少比较的次数。
+
+需要注意的是，冒泡排序的时间复杂度为 O(n^2)，因此在处理大规模数据时，它的性能可能会受到影响。
+
+### 快速排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/swapsort/QuickSort.java)
+
+#### 思路
+
+快速排序（Quick Sort）是一种基于分治思想的排序算法，其基本思想是选择一个基准元素，然后将数组分为两部分，一部分比基准元素小，一部分比基准元素大，然后递归地对两部分进行排序，最终得到有序数组。
+
+Java 中实现快速排序可以通过递归实现，具体步骤如下：
+
+1. 选择一个基准元素，一般是选取数组的第一个元素或最后一个元素。
+2. 将数组分为两部分，一部分比基准元素小，一部分比基准元素大。
+3. 对两部分分别进行递归排序。
+4. 合并两部分得到有序数组。
+
+在这个实现中，我们首先选择数组的第一个元素作为基准元素，然后使用双指针法（即快慢指针法）将数组分为两部分，一部分比基准元素小，一部分比基准元素大。具体来说，我们从右往左找到第一个小于基准元素的元素，然后从左往右找到第一个大于基准元素的元素，将它们交换位置，然后继续寻找下一对需要交换的元素，直到两个指针相遇。最后，将基准元素放到正确的位置上，并递归对左右两部分进行排序，直到数组完全有序。
+
+## 插入排序
+
+### 直接插入排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/insertsort/InsertionSort.java)
+
+#### 思路
+
+直接插入排序（Insertion Sort）是一种简单直观的排序算法，其基本思想是将待排序的数组分为已排序区间和未排序区间，每次取出未排序区间中的第一个元素插入到已排序区间中的合适位置，直到未排序区间为空为止。
+
+具体实现过程如下：
+
+1. 从第二个元素开始遍历数组，将其作为当前待插入元素。
+2. 将当前元素与已排序区间中的元素进行比较，找到合适的插入位置。
+3. 将已排序区间中大于当前元素的元素后移一位，直到找到合适的插入位置。
+4. 将当前元素插入到找到的位置。
+5. 重复以上步骤，直到未排序区间为空。
+
+将待插入的元素作为 key，从已排序区间的末尾开始向前遍历，找到第一个小于等于 key 的元素的位置，然后将大于 key 的元素向后移动一位，并将 key 插入到空出来的位置。
+
+直接插入排序的时间复杂度为 O($n^2$)，空间复杂度为 O($1$)，在数据规模较小的情况下表现较好，但对于大规模数据可能不太适用。
+
+### 希尔排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/insertsort/ShellSort.java)
+
+#### 思路
+
+希尔排序（Shell Sort）是插入排序的一种改进，其基本思想是将待排序的数组按照一定的步长进行分组，对每组进行直接插入排序，然后逐步缩小步长，重复以上步骤，直到步长为 1，最后对整个数组进行一次直接插入排序。
+
+具体实现过程如下：
+
+1. 将待排序数组按照步长 gap 进行分组，对每组进行直接插入排序。
+2. 缩小步长 gap，重复步骤 1，直到 gap 为 1。
+3. 对整个数组进行一次直接插入排序。
+
+首先将数组按照 gap 步长进行分组，对每组进行直接插入排序。然后不断缩小步长 gap，重复以上步骤，直到 gap 为 1，最后对整个数组进行一次直接插入排序。
+
+希尔排序的时间复杂度和空间复杂度都与步长序列的选取有关，一般情况下时间复杂度为 O($n log n$)，空间复杂度为 O($1$)，在数据规模较大的情况下表现较好。
+
+## 选择排序
+
+### 简单选择排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/SelectionSort.java)
+
+#### 思路
+
+简单选择排序（Selection Sort）是一种简单直观的排序算法，其基本思想是将待排序的数组分为已排序区间和未排序区间，每次从未排序区间中选择最小的元素放到已排序区间的末尾，直到未排序区间为空为止。
+
+具体实现过程如下：
+
+1. 将数组分为已排序区间和未排序区间，初始时已排序区间为空。
+2. 在未排序区间中找到最小的元素，将其和未排序区间的第一个元素交换位置。
+3. 将交换后的第一个元素划分到已排序区间中。
+4. 重复以上步骤，直到未排序区间为空。
+
+首先将数组分为已排序区间和未排序区间，初始时已排序区间为空。然后在未排序区间中找到最小的元素，将其和未排序区间的第一个元素交换位置，将交换后的第一个元素划分到已排序区间中。重复以上步骤，直到未排序区间为空。
+
+简单选择排序的时间复杂度为 O($n^2$)，空间复杂度为 O($1$)，在数据规模较小的情况下表现较好，但对于大规模数据可能不太适用。
+
+可以进行一些简单的优化，例如：
+
+1. 增加跳过已经有序的子序列的操作。因为在已经有序的子序列中，找到最小元素的时间复杂度为 O(1)，所以可以在每次查找最小元素时跳过已经有序的子序列。
+2. 使用双指针，同时查找最小和最大元素，将查找最小和最大元素的时间复杂度从 O(n) 优化为 O($n/2$)。
+
+优化后的简单选择排序将查找最小和最大元素的时间复杂度从 O(n) 优化为 O($n/2$)，性能有一定提升，但是时间复杂度仍然为 O($n^2$)。如果要排序大规模数据，建议使用时间复杂度更低的排序算法。
+
+### 堆排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/HeapSort.java)
+
+#### 思路
+
+堆排序是一种基于比较的排序算法，它的时间复杂度为 O($nlogn$)，相比于冒泡排序、插入排序、选择排序等 O($n^2$) 级别的排序算法，堆排序性能更优。
+
+堆排序基于堆这种数据结构，堆是一棵完全二叉树，具有以下两个特点：
+
+1. 父节点的值总是大于（或小于）它的子节点的值。
+2. 堆中的每个子树都是一个堆。
+
+堆可以分为两种：大根堆和小根堆。在大根堆中，父节点的值总是大于它的子节点的值；在小根堆中，父节点的值总是小于它的子节点的值。
+
+堆排序的基本思想是：将待排序序列构造成一个大根堆，此时整个序列的最大值就是堆顶的根节点。将它移走（其实就是将其与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余的 n-1 个元素重新构造成一个堆，这样就得到了 n 个元素的次小值。依此类推，重复执行上述操作，直到整个序列有序。
+
+如果要进一步优化，可以考虑以下几点：
+
+1. 优化空间复杂度
+
+	上面给出的堆排序实现需要额外的 O(n) 空间来存储堆。实际上可以在原地排序的前提下，把堆化和排序操作合并到同一个函数中。这样可以将空间复杂度降到 O($1$)，但是代码实现相对较为复杂。
+
+2. 优化堆化操作
+
+	上面给出的堆化操作是基于递归实现的，递归的深度等于树的高度，最坏情况下为 O($log n$)。如果使用迭代实现堆化操作，可以将堆化操作的时间复杂度降到 O($log n$)。
+
+3. 优化建堆操作
+
+	上面给出的建堆操作的时间复杂度为 O($n$)，实际上可以使用 Floyd 建堆算法将其优化到 O($log n$)。Floyd 建堆算法的基本思想是从最后一个非叶子节点开始，自下而上进行堆化操作。这样可以避免对已经是叶子节点的节点进行堆化，从而减少堆化操作的次数，提高效率。
+
+综上所述，堆排序已经是一个非常高效的算法，进一步的优化空间有限，需要根据具体情况进行考虑和权衡。
+
+### 归并排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/MergeSort.java)
+
+#### 思路
+
+归并排序是一种基于分治思想的排序算法，它的基本思想是将原序列划分成多个子序列，对每个子序列进行排序，然后将这些子序列合并成一个有序序列。归并排序的时间复杂度是 O($nlogn$)，它是稳定的排序算法，适用于各种规模的数据。
+
+```java
+public class MergeSort {
+    public static void mergeSort(int[] arr) {
+        int n = arr.length;
+        int[] temp = new int[n];
+        mergeSort(arr, 0, n - 1, temp);
+    }
+
+    private static void mergeSort(int[] arr, int l, int r, int[] temp) {
+        if (l < r) {
+            int mid = (l + r) / 2;
+            mergeSort(arr, l, mid, temp);
+            mergeSort(arr, mid + 1, r, temp);
+            merge(arr, l, mid, r, temp);
+        }
+    }
+
+    private static void merge(int[] arr, int l, int mid, int r, int[] temp) {
+        int i = l, j = mid + 1, k = 0;
+        while (i <= mid && j <= r) {
+            if (arr[i] <= arr[j]) {
+                temp[k++] = arr[i++];
+            } else {
+                temp[k++] = arr[j++];
+            }
+        }
+        while (i <= mid) {
+            temp[k++] = arr[i++];
+        }
+        while (j <= r) {
+            temp[k++] = arr[j++];
+        }
+        k = 0;
+        while (l <= r) {
+            arr[l++] = temp[k++];
+        }
+    }
+}
+```
+
+这里的 `mergeSort()` 方法是归并排序的入口方法，它接受一个整数数组作为参数，并调用私有方法 `mergeSort()` 完成实际的排序操作。私有方法 `mergeSort()` 的参数包括要排序的数组、左右指针以及一个辅助数组。在 `mergeSort()` 方法中，我们首先将原序列划分成左右两个子序列，然后分别对这两个子序列进行排序，最后将这两个有序子序列合并成一个有序序列。
+
+私有方法 merge() 实现了两个有序子序列的合并，我们使用三个指针 i、j、k 分别指向左子序列、右子序列和辅助数组的起始位置，比较两个子序列的元素大小，并将较小的元素放入辅助数组中，直到一个子序列全部放入辅助数组中。最后将辅助数组中的元素复制回原数组中，完成排序。
+
+归并排序的时间复杂度是 O($nlogn$)，空间复杂度是 O(n)，它是一种稳定的排序算法，适用于各种规模的数据。
+
+可以进行进一步的优化。
+
+1. 当子序列的长度小于等于某个阈值时，采用插入排序算法可以提高排序效率。
+2. 在 `merge()` 方法中，可以优化比较大小的过程，避免频繁地使用不必要的条件语句。比如，我们可以先判断两个子序列中的第一个元素哪个更小，然后从较小的子序列开始比较，可以避免一些不必要的比较操作。
+3. 在合并有序子序列时，如果左子序列的最大元素小于右子序列的最小元素，就不需要再进行合并操作了，可以直接将两个子序列连接起来。
+
+### 基数排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/RadixSort.java)
+
+#### 思路
+
+基数排序是一种非比较排序算法，它将整数按照位数切割成不同的数字，然后按每个位数分别进行排序。它可以看作是桶排序的扩展，需要一个队列或桶数组来辅助实现排序。
+
+```java
+public class RadixSort {
+    public static void radixSort(int[] arr) {
+        int maxDigit = getMaxDigit(arr); // 获取最大位数
+        int radix = 10; // 基数为 10
+        int[] count = new int[radix]; // 计数数组
+        int[] bucket = new int[arr.length]; // 桶数组
+        for (int digit = 1; digit <= maxDigit; digit++) {
+            // 初始化计数数组
+            Arrays.fill(count, 0);
+            // 统计当前位上每个数字出现的次数
+            for (int i = 0; i < arr.length; i++) {
+                int num = getDigit(arr[i], digit);
+                count[num]++;
+            }
+            // 将计数数组转换为累加数组
+            for (int i = 1; i < radix; i++) {
+                count[i] += count[i - 1];
+            }
+            // 按当前位上的数字，将元素放入桶中
+            for (int i = arr.length - 1; i >= 0; i--) {
+                int num = getDigit(arr[i], digit);
+                bucket[count[num] - 1] = arr[i];
+                count[num]--;
+            }
+            // 将桶中的元素复制回原数组中
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = bucket[i];
+            }
+        }
+    }
+
+    private static int getMaxDigit(int[] arr) {
+        int maxDigit = 1;
+        int base = 10;
+        for (int i = 0; i < arr.length; i++) {
+            int num = arr[i];
+            int digit = 1;
+            while (num >= base) {
+                num /= base;
+                digit++;
+            }
+            maxDigit = Math.max(maxDigit, digit);
+        }
+        return maxDigit;
+    }
+
+    private static int getDigit(int num, int digit) {
+        return (num / (int) Math.pow(10, digit - 1)) % 10;
+    }
+}
+```
+
+基数排序的核心思想，通过不断地按照数字的每一位进行排序，最终将数组变为有序状态。其中，getMaxDigit() 方法用于获取最大位数，getDigit() 方法用于获取数字的某一位，radixSort() 方法用于实现基数排序的具体流程。
+
+可以进行优化的地方。
+
+1. 针对负数的处理：以上实现只考虑了正整数，如果数组中存在负数，则需要先将所有数字取相反数再排序，最后再将排序结果取相反数。
+2. 桶的大小：以上实现中，桶的大小为原数组的长度，这可能会造成空间浪费。可以根据数字的范围，合理地选择桶的大小。
+3. 循环复用计数数组：以上实现中，在每次排序时都会新建一个计数数组，这会带来一定的空间和时间开销。可以在外部先创建一个计数数组，并在每次排序结束后清空其内容，然后重复利用该计数数组。
+4. 多线程优化：基数排序是稳定排序，每一位上的排序是独立的，可以考虑使用多线程进行优化。比如，将数组分为多个子数组，然后在每个子数组上开启一个线程进行排序，最后合并各个有序子数组。
+
+### 桶排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/BucketSort.java)
+
+#### 思路
+
+桶排序是一种线性排序算法，它利用了额外的空间，将待排序的元素分到不同的桶中，对每个桶内的元素进行排序，最后将桶中元素按照顺序依次输出，即可得到有序序列。桶排序的时间复杂度为 O(n)，但其空间复杂度较高，取决于桶的数量和大小。
+
+```java
+public class BucketSort {
+    public static void bucketSort(int[] arr, int bucketSize) {
+        if (arr == null || arr.length <= 1) {
+            return;
+        }
+        int minValue = arr[0], maxValue = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < minValue) {
+                minValue = arr[i];
+            } else if (arr[i] > maxValue) {
+                maxValue = arr[i];
+            }
+        }
+        int bucketCount = (maxValue - minValue) / bucketSize + 1;
+        List<List<Integer>> buckets = new ArrayList<>(bucketCount);
+        for (int i = 0; i < bucketCount; i++) {
+            buckets.add(new ArrayList<>());
+        }
+        for (int i = 0; i < arr.length; i++) {
+            int index = (arr[i] - minValue) / bucketSize;
+            buckets.get(index).add(arr[i]);
+        }
+        int k = 0;
+        for (int i = 0; i < bucketCount; i++) {
+            List<Integer> bucket = buckets.get(i);
+            if (bucket.isEmpty()) {
+                continue;
+            }
+            int[] bucketArray = new int[bucket.size()];
+            for (int j = 0; j < bucket.size(); j++) {
+                bucketArray[j] = bucket.get(j);
+            }
+            insertionSort(bucketArray); // 对每个桶内元素进行插入排序
+            for (int j = 0; j < bucketArray.length; j++) {
+                arr[k++] = bucketArray[j];
+            }
+        }
+    }
+
+    private static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int j = i;
+            int temp = arr[j];
+            while (j > 0 && temp < arr[j - 1]) {
+                arr[j] = arr[j - 1];
+                j--;
+            }
+            arr[j] = temp;
+        }
+    }
+}
+
+```
+
+上述代码中，先通过扫描数组得到数组中的最小值和最大值，根据最大值和最小值以及桶的大小，计算出需要的桶数。接着创建桶，并将每个元素分配到对应的桶中。对于每个桶内的元素，可以采用插入排序等简单的排序算法进行排序。最后，将桶中排好序的元素依次输出，即可得到有序序列。
+
+根据具体场景进行一些优化。
+
+1. 桶的大小
+
+	桶的大小可以根据实际情况进行调整，一般来说，桶的大小越大，排序的效率会越高，但同时会增加额外的空间开销。因此，需要根据排序元素的范围大小和数量来选择合适的桶大小。
+
+2. 插入排序算法
+
+	对于每个桶内的元素，可以采用不同的排序算法进行排序。如果桶内元素较少，可以选择插入排序等简单的排序算法。如果桶内元素较多，可以选择更高效的排序算法，如快速排序、归并排序等。
+
+3. 多线程并发排序
+
+	由于桶排序的过程可以被拆分成多个独立的子任务，可以考虑使用多线程并发实现桶排序，以提高排序的效率。
+
 # 数组
 
 ## 二分查找
