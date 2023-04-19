@@ -144,7 +144,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 ### 归并排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/MergeSort.java)
+[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/MergeSort.java)
 
 #### 思路
 
@@ -204,7 +204,7 @@ public class MergeSort {
 
 ### 基数排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/RadixSort.java)
+[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/RadixSort.java)
 
 #### 思路
 
@@ -274,7 +274,7 @@ public class RadixSort {
 
 ### 桶排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/BucketSort.java)
+[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/BucketSort.java)
 
 #### 思路
 
@@ -350,6 +350,40 @@ public class BucketSort {
 3. 多线程并发排序
 
 	由于桶排序的过程可以被拆分成多个独立的子任务，可以考虑使用多线程并发实现桶排序，以提高排序的效率。
+
+## 并行排序
+
+### 实现并行归并排序
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/parallel/ParallelMergeSort.java)
+
+#### 思路
+
+使用了**Fork/Join框架**来实现并行归并排序。首先，我们创建了一个`MergeSortTask`类来表示一个排序任务。每个任务都表示对数组的一部分进行排序。在任务的`compute()`方法中，我们首先判断数组是否需要分割成更小的部分。如果是，则创建两个新的任务，并使用`invokeAll()`方法并行执行这两个任务。最后，我们使用`merge()`方法将两个子数组合并成一个有序数组。
+
+在`main()`方法中，我们创建了一个新的`ForkJoinPool`对象，并使用`invoke()`方法调用根任务，即对整个数组进行排序。最后，我们打印出排序后的数组。
+
+需要注意的是，并行归并排序的性能也受多种因素影响，如数组大小、硬件配置等。在实际应用中，需要进行测试和比较，选择最合适的排序方法。
+
+#### Fork/Join框架是什么？
+
+**Fork/Join框架**是Java SE 7中新增的一种并行编程框架，它是一种支持递归任务分割和*工作窃取（Work Stealing）*的线程池实现，可以用于解决一些需要递归划分子任务并合并结果的问题。其核心思想是将大任务拆分成小任务，将小任务交给线程池中的工作线程去执行，工作线程执行完任务后，会尝试窃取其他工作线程队列中的任务继续执行。
+
+Fork/Join框架的基本思路是：
+
+1. 将大任务拆分成多个子任务，直到子任务足够小，可以直接被处理。
+2. 多个子任务被提交到线程池的工作队列中。
+3. 线程池中的工作线程从队列中取出任务并执行。
+4. 当工作线程执行完任务后，会尝试窃取其他工作线程队列中的任务继续执行。
+5. 当所有子任务执行完成后，合并所有结果得到最终结果。
+
+Fork/Join框架的使用方法是：
+
+1. 定义一个继承自`RecursiveAction`或`RecursiveTask`的任务类，分别代表无返回值的任务和有返回值的任务。
+2. 在任务类中实现任务的分割和合并逻辑，使用`compute()`方法执行具体的任务。
+3. 在主程序中，创建一个`ForkJoinPool`对象，使用`invoke()`方法提交任务，等待任务执行完成。
+
+使用Fork/Join框架可以很方便地实现一些并行计算的问题，但需要注意的是，如果任务拆分得不够细，可能会导致工作线程的负载不均衡，影响并行计算的性能。因此，在使用Fork/Join框架时需要考虑任务的拆分粒度和负载均衡问题。
 
 # 数组
 
