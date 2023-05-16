@@ -17,6 +17,7 @@
         <module>BinaryTree</module>
         <module>Backtrack</module>
         <module>Sort</module>
+        <module>Greedy</module>
     </modules>
 
     <properties>
