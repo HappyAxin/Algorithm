@@ -11,11 +11,7 @@ import java.util.Comparator;
 public class Solution435 {
     public int eraseOverlapIntervals(int[][] intervals) {
         // 对区间按照结束位置进行升序排序
-        Arrays.sort(intervals, new Comparator<int[]>() {
-            public int compare(int[] a, int[] b) {
-                return a[1] - b[1];
-            }
-        });
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
 
         // 记录需要移除的区间数量
         int count = 0;
