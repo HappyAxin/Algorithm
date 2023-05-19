@@ -18,6 +18,7 @@
         <module>06-BinaryTree</module>
         <module>07-Backtrack</module>
         <module>08-Greedy</module>
+        <module>09-DynamicProgramming</module>
     </modules>
 
     <properties>
@@ -38,6 +39,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
         </dependency>
     </dependencies>
 </project>
