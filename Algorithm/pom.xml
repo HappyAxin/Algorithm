@@ -9,15 +9,15 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>Array</module>
-        <module>LinkList</module>
-        <module>String</module>
-        <module>Map</module>
-        <module>Stack_Queue</module>
-        <module>BinaryTree</module>
-        <module>Backtrack</module>
-        <module>Sort</module>
-        <module>Greedy</module>
+        <module>0-Sort</module>
+        <module>01-Array</module>
+        <module>02-LinkList</module>
+        <module>03-String</module>
+        <module>04-Map</module>
+        <module>05-Stack_Queue</module>
+        <module>06-BinaryTree</module>
+        <module>07-Backtrack</module>
+        <module>08-Greedy</module>
     </modules>
 
     <properties>

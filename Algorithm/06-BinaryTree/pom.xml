@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Sort</artifactId>
+    <artifactId>06-BinaryTree</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
