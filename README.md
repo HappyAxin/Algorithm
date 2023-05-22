@@ -26,7 +26,7 @@ LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://w
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/swapsort/BubbleSort.java)
 
-#### 思路
+#### 代码说明
 
 冒泡排序（Bubble Sort）是一种简单的排序算法，它的基本思想是通过不断交换相邻的元素将未排序的最大（或最小）元素逐渐“浮”到数组的末尾（或开头）。具体来说，冒泡排序的算法步骤如下：
 
@@ -44,7 +44,7 @@ LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://w
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/swapsort/QuickSort.java)
 
-#### 思路
+#### 代码说明
 
 快速排序（Quick Sort）是一种基于分治思想的排序算法，其基本思想是选择一个基准元素，然后将数组分为两部分，一部分比基准元素小，一部分比基准元素大，然后递归地对两部分进行排序，最终得到有序数组。
 
@@ -63,7 +63,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/insertsort/InsertionSort.java)
 
-#### 思路
+#### 代码说明
 
 直接插入排序（Insertion Sort）是一种简单直观的排序算法，其基本思想是将待排序的数组分为已排序区间和未排序区间，每次取出未排序区间中的第一个元素插入到已排序区间中的合适位置，直到未排序区间为空为止。
 
@@ -83,7 +83,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/insertsort/ShellSort.java)
 
-#### 思路
+#### 代码说明
 
 希尔排序（Shell Sort）是插入排序的一种改进，其基本思想是将待排序的数组按照一定的步长进行分组，对每组进行直接插入排序，然后逐步缩小步长，重复以上步骤，直到步长为 1，最后对整个数组进行一次直接插入排序。
 
@@ -103,7 +103,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/SelectionSort.java)
 
-#### 思路
+#### 代码说明
 
 简单选择排序（Selection Sort）是一种简单直观的排序算法，其基本思想是将待排序的数组分为已排序区间和未排序区间，每次从未排序区间中选择最小的元素放到已排序区间的末尾，直到未排序区间为空为止。
 
@@ -129,7 +129,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/HeapSort.java)
 
-#### 思路
+#### 代码说明
 
 堆排序是一种基于比较的排序算法，它的时间复杂度为 O($nlogn$)，相比于冒泡排序、插入排序、选择排序等 O($n^2$) 级别的排序算法，堆排序性能更优。
 
@@ -162,7 +162,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 [代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/MergeSort.java)
 
-#### 思路
+#### 代码说明
 
 归并排序是一种基于分治思想的排序算法，它的基本思想是将原序列划分成多个子序列，对每个子序列进行排序，然后将这些子序列合并成一个有序序列。归并排序的时间复杂度是 O($nlogn$)，它是稳定的排序算法，适用于各种规模的数据。
 
@@ -222,7 +222,7 @@ public class MergeSort {
 
 [代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/RadixSort.java)
 
-#### 思路
+#### 代码说明
 
 基数排序是一种非比较排序算法，它将整数按照位数切割成不同的数字，然后按每个位数分别进行排序。它可以看作是桶排序的扩展，需要一个队列或桶数组来辅助实现排序。
 
@@ -292,7 +292,7 @@ public class RadixSort {
 
 [代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/BucketSort.java)
 
-#### 思路
+#### 代码说明
 
 桶排序是一种线性排序算法，它利用了额外的空间，将待排序的元素分到不同的桶中，对每个桶内的元素进行排序，最后将桶中元素按照顺序依次输出，即可得到有序序列。桶排序的时间复杂度为 O(n)，但其空间复杂度较高，取决于桶的数量和大小。
 
@@ -373,7 +373,7 @@ public class BucketSort {
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/parallel/ParallelMergeSort.java)
 
-#### 思路
+#### 代码说明
 
 使用了**Fork/Join框架**来实现并行归并排序。首先，创建了一个`MergeSortTask`类来表示一个排序任务。每个任务都表示对数组的一部分进行排序。在任务的`compute()`方法中，首先判断数组是否需要分割成更小的部分。如果是，则创建两个新的任务，并使用`invokeAll()`方法并行执行这两个任务。最后，使用`merge()`方法将两个子数组合并成一个有序数组。
 
@@ -385,7 +385,7 @@ public class BucketSort {
 
 **Fork/Join框架**是Java SE 7中新增的一种并行编程框架，它是一种支持递归任务分割和*工作窃取（Work Stealing）*的线程池实现，可以用于解决一些需要递归划分子任务并合并结果的问题。其核心思想是将大任务拆分成小任务，将小任务交给线程池中的工作线程去执行，工作线程执行完任务后，会尝试窃取其他工作线程队列中的任务继续执行。
 
-Fork/Join框架的基本思路是：
+Fork/Join框架的基本代码说明是：
 
 1. 将大任务拆分成多个子任务，直到子任务足够小，可以直接被处理。
 2. 多个子任务被提交到线程池的工作队列中。
@@ -409,7 +409,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution704.java)
 
-#### 思路
+#### 代码说明
 
 1. 令左指针 l = 0, 右指针 r = n-1。 
 
@@ -429,7 +429,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution35.java)
 
-#### 思路
+#### 代码说明
 
 1. 初始化左右指针，左指针指向数组的起始位置，右指针指向数组的末尾位置。
 
@@ -449,7 +449,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution34.java)
 
-#### 思路
+#### 代码说明
 
 1. 第一次二分查找找到目标值的左边界（第一次出现的位置）。
 
@@ -483,7 +483,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution69.java)
 
-#### 思路
+#### 代码说明
 
 在区间 [0, x] 上进行二分查找，每次找到中间位置 mid，并判断 mid 的平方是否小于等于 x。
 
@@ -495,7 +495,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution367.java)
 
-#### 思路
+#### 代码说明
 
 在区间 [1, num] 上进行二分查找，每次找到中间位置 mid，并判断 mid 的平方是否等于 num。
 
@@ -507,7 +507,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution27.java)
 
-#### 思路
+#### 代码说明
 
 用两个指针 i 和 j 分别指向数组的开头，然后遍历数组。
 
@@ -521,7 +521,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution26.java)
 
-#### 思路
+#### 代码说明
 
 用两个指针 i 和 j 分别指向数组的开头，然后遍历数组。当 nums[j] 等于 nums[i] 时，将 j 后移一位，直到找到一个不等于 nums[i] 的元素 nums[j']，然后将 nums[j'] 赋值给 nums[i + 1]，并将 i 后移一位。
 
@@ -533,7 +533,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution283.java)
 
-#### 思路
+#### 代码说明
 
 一个指针 i 用来遍历数组，另一个指针 j 用来指向下一个非零元素应该放置的位置。
 
@@ -543,7 +543,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution844.java)
 
-#### 思路
+#### 代码说明
 
 遍历字符串 s 和 t，遇到非退格字符时，将其压入栈中；遇到退格字符时，将栈顶元素弹出。
 
@@ -553,7 +553,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution977.java)
 
-#### 思路
+#### 代码说明
 
 用两个指针分别指向数组的左右两端，比较两个指针指向的数的绝对值大小，将较大的数的平方放入新数组的末尾。
 
@@ -565,7 +565,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/slidingwindow/Solution209.java)
 
-#### 思路
+#### 代码说明
 
 定义两个指针 left 和 right，分别表示子数组的左右边界，初始值都为 0。
 
@@ -579,7 +579,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/slidingwindow/Solution904.java)
 
-#### 思路
+#### 代码说明
 
 定义两个指针 left 和 right，分别表示窗口的左右边界，初始值都为 0。
 
@@ -595,7 +595,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/slidingwindow/Solution76.java)
 
-#### 思路
+#### 代码说明
 
 用两个指针 left 和 right 来表示窗口的左右边界，初始值都为 0。
 
@@ -615,7 +615,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/mockaction/Solution59.java)
 
-#### 思路
+#### 代码说明
 
 可以定义四个变量 left、right、top、bottom 分别表示当前需要填充的矩阵的左、右、上、下边界，初始值分别为 0、n-1、0、n-1。
 
@@ -629,7 +629,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/mockaction/Solution54.java)
 
-#### 思路
+#### 代码说明
 
 同上
 
@@ -637,9 +637,9 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/mockaction/Offer29.java)
 
-#### 思路
+#### 代码说明
 
-这个问题跟上一个问题类似，只不过需要把顺时针打印的数字依次存储在一个数组里面。具体思路可以分为四个步骤
+这个问题跟上一个问题类似，只不过需要把顺时针打印的数字依次存储在一个数组里面。具体代码说明可以分为四个步骤
 
 1. 定义上下左右四个边界，初始化为矩阵的边界。
 2. 按照顺时针顺序，将矩阵的数字依次存储到结果数组中。具体方法是先从左到右遍历上边界，然后从上到下遍历右边界，然后从右到左遍历下边界，最后从下到上遍历左边界。
@@ -654,7 +654,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/base/Solution707.java)
 
-#### 思路
+#### 代码说明
 
 1. 定义链表节点类 ListNode，包括三个属性val 表示节点值，next 表示指向下一个节点的指针/引用，prev 表示指向前一个节点的指针/引用（对于双向链表）。
 2. 定义 MyLinkedList 类，包括两个属性head 表示链表头节点，tail 表示链表尾节点（对于双向链表）。
@@ -671,7 +671,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/dummyhead/Solution203.java)
 
-#### 思路
+#### 代码说明
 
 从头节点开始，遍历链表，删除所有值等于 val 的节点。
 
@@ -685,7 +685,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/dummyhead/Solution24.java)
 
-#### 思路
+#### 代码说明
 
 将链表分成两个节点为一组的小链表，对每一组进行交换。如果链表中节点数量为奇数，最后一个节点不用进行交换。如果链表为空或者只有一个节点，则直接返回该链表。
 
@@ -695,7 +695,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/dummyhead/Solution19.java)
 
-#### 思路
+#### 代码说明
 
 首先将快指针向前移动 n 步。然后将慢指针和快指针同时移动，直到快指针到达链表的末尾。
 
@@ -709,7 +709,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/intersection/Solution160.java)
 
-#### 思路
+#### 代码说明
 
 设链表 A 长度为 a，链表 B 长度为 b，两个链表的相交部分长度为 c，则有以下结论
 
@@ -731,7 +731,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/circle/Solution142.java)
 
-#### 思路
+#### 代码说明
 
 首先设定两个指针 slow 和 fast，初始时指向链表的头节点。然后让 slow 指针每次前进一步，fast 指针每次前进两步。如果链表中存在环，那么 fast 指针最终一定会追上 slow 指针。具体证明可以参考题目描述中的这个例子
 
@@ -758,7 +758,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution242.java)
 
-#### 思路
+#### 代码说明
 
 先使用哈希表记录字符串 s 中每个字符出现的次数，然后再遍历字符串 t，对于每个字符，将其在哈希表中对应的次数减一。
 
@@ -770,7 +770,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution383.java)
 
-#### 思路
+#### 代码说明
 
 先统计 magazine 中每个字符出现的次数，然后遍历 ransomNote 中的字符，检查其在 magazine 中出现的次数是否大于等于 ransomNote 中出现的次数。
 
@@ -780,7 +780,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution49.java)
 
-#### 思路
+#### 代码说明
 
 将每个单词按照字母顺序排序后作为键存储在哈希表中，值为所有字母顺序相同的单词的列表。
 
@@ -790,7 +790,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution438.java)
 
-#### 思路
+#### 代码说明
 
 具体来说，可以先用一个哈希表来记录模式串中每个字符出现的次数，然后用两个指针 left 和 right 表示滑动窗口的左右端点。一开始，两个指针都指向 s 的起始位置。然后，不断地增加 right 指针扩大窗口，直到窗口大小等于 p 的长度为止。在扩大窗口的过程中，每当窗口内的字符满足条件（即窗口内的字符出现次数等于模式串中的字符出现次数）时，就将窗口的左端点作为一个答案加入结果集。接下来，移动左指针并缩小窗口，直到窗口内的字符不再满足条件为止，然后再增加 right 指针扩大窗口，如此往复直到 right 指针到达 s 的末尾。
 
@@ -804,7 +804,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/set/Solution349.java)
 
-#### 思路
+#### 代码说明
 
 首先，将一个数组中的元素添加到哈希表中，然后遍历另一个数组，检查它们是否在哈希表中出现过，如果出现过，就加入到结果集合中。
 
@@ -812,7 +812,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/set/Solution350.java)
 
-#### 思路
+#### 代码说明
 
 首先遍历 nums1，将每个数字出现的次数记录在哈希表中。然后遍历 nums2，对于每个数字，如果它在哈希表中出现过，就将它加入答案，并将哈希表中的计数减 1。
 
@@ -826,7 +826,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/set/Solution202.java)
 
-#### 思路
+#### 代码说明
 
 首先定义一个Set集合用于存储每次计算的结果，用于判断是否进入了循环。
 
@@ -844,7 +844,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/map/Solution1.java)
 
-#### 思路
+#### 代码说明
 
 遍历一遍数组，对于每个数，判断它的差值（即 target - nums[i]）是否在哈希表中出现过，如果出现过，说明找到了这两个数，直接返回它们的下标即可。如果没有找到，就将这个数存入哈希表中，继续遍历下一个数。
 
@@ -852,7 +852,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/map/Solution454.java)
 
-#### 思路
+#### 代码说明
 
 先遍历 `nums1` 和 `nums2`，将两个数组中所有数的和及其出现的次数存储在哈希表 `sums` 中。然后遍历 `nums3` 和 `nums4`，对于每一对数，如果它们的相反数在 `sums` 中出现过，就将 `sums` 中该数的出现次数累加到答案中。最后返回答案即可。
 
@@ -862,7 +862,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/doublepointer/Solution15.java)
 
-#### 思路
+#### 代码说明
 
 首先将数组排序，然后枚举第一个数，使用双指针在剩余的数中寻找符合条件的另外两个数。
 
@@ -874,7 +874,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/doublepointer/Solution18.java)
 
-#### 思路
+#### 代码说明
 
 可以将四数之和转化为三数之和的问题，具体步骤如下
 
@@ -892,7 +892,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/doublepointer/Solution344.java)
 
-#### 思路
+#### 代码说明
 
 1. 定义两个指针left和right，分别指向字符串s的起始和末尾位置；
 2. 当left小于right时，交换s[left]和s[right]；
@@ -902,7 +902,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/doublepointer/Solution541.java)
 
-#### 思路
+#### 代码说明
 
 从字符串开头开始，每计数至 2k 个字符，就反转这 2k 字符中的前 k 个字符。
 
@@ -912,7 +912,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/doublepointer/Offer05.java)
 
-#### 思路
+#### 代码说明
 
 可以先遍历一遍字符串，计算出空格的数量，然后根据空格数量算出替换后字符串的长度，再从后往前遍历字符串，将字符从后往前依次复制到替换后的位置上。
 
@@ -934,7 +934,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/reverse/Solution151.java)
 
-#### 思路
+#### 代码说明
 
 可以先将字符串去除前导和尾随空格，然后按照空格分割成单词数组，最后将单词数组倒序拼接即可。
 
@@ -942,7 +942,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/reverse/Offer58II.java)
 
-#### 思路
+#### 代码说明
 
 可以先将原字符串分为两部分，即要左旋转的部分和剩余部分，然后分别翻转这两部分，最后再将整个字符串翻转一次即可。具体步骤如下
 
@@ -957,7 +957,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/kmp/Solution28.java)
 
-#### 思路
+#### 代码说明
 
 1. 首先判断特殊情况，如果 `needle` 为空字符串，则返回 0。
 2. 对于 `haystack` 中的每个字符，从当前位置开始，与 `needle` 中的字符逐一比较。
@@ -967,7 +967,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/kmp/Solution459.java)
 
-#### 思路
+#### 代码说明
 
 如果一个字符串可以由一个子串重复多次构成，那么这个子串的长度一定是原字符串长度的因数，并且除了原字符串本身以外，这个子串在原字符串中不会出现。因此，可以枚举所有可能的子串长度，对于每个子串长度，判断它是否满足上述两个条件。
 
@@ -983,7 +983,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/tree/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/system)
 
-##### 思路
+##### 代码说明
 
 遍历整个路径，遇到非斜杠字符则记录开始位置，遇到斜杠字符则记录结束位置，得到一个目录名。然后分类讨论
 
@@ -999,7 +999,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/bracket/Solution20.java)
 
-##### 思路
+##### 代码说明
 
 遍历字符串，对于每一个字符，如果是左括号，就把它压入栈中；如果是右括号，就弹出栈顶元素并判断是否匹配。如果不匹配，说明字符串无效；如果最后栈不为空，也说明字符串无效。
 
@@ -1009,7 +1009,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/deduplication/Solution1047.java)
 
-##### 思路
+##### 代码说明
 
 遍历字符串，如果当前字符和栈顶元素相同，则弹出栈顶元素；否则将当前字符入栈。最终栈中剩余的字符即为答案。
 
@@ -1019,7 +1019,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/evalRPN/Solution150.java)
 
-##### 思路
+##### 代码说明
 
 逆波兰表达式的求值可以使用栈来实现，具体过程如下
 
@@ -1036,7 +1036,7 @@ Fork/Join框架的使用方法是：
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/quene/array/Solution239.java)
 
-##### 思路
+##### 代码说明
 
 使用双端队列（deque）来实现。
 
@@ -1050,7 +1050,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/quene/priority/Solution347.java)
 
-##### 思路
+##### 代码说明
 
 可以使用哈希表和桶排序结合的方法来解决此问题。具体步骤如下
 
@@ -1068,7 +1068,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/recursion/Solution144.java)
 
-##### 思路
+##### 代码说明
 
 在实现二叉树前序遍历的递归算法时，可以先访问根节点，然后递归访问左子树，最后递归访问右子树。具体实现步骤如下
 
@@ -1081,7 +1081,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/recursion/Solution94.java)
 
-##### 思路
+##### 代码说明
 
 1. 如果当前节点不为空，先遍历当前节点的左子树
 2. 访问当前节点
@@ -1093,7 +1093,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/recursion/Solution145.java)
 
-##### 思路
+##### 代码说明
 
 1. 如果根节点为空，直接返回空列表。
 2. 否则，先递归遍历左子树，将左子树的后序遍历结果存入结果列表中。
@@ -1107,7 +1107,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/iteration/Solution144.java)
 
-##### 思路
+##### 代码说明
 
 在实现二叉树前序遍历的递归算法时，可以先访问根节点，然后递归访问左子树，最后递归访问右子树。具体实现步骤如下
 
@@ -1120,7 +1120,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/iteration/Solution94.java)
 
-##### 思路
+##### 代码说明
 
 1. 如果当前节点不为空，先遍历当前节点的左子树
 2. 访问当前节点
@@ -1132,7 +1132,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/iteration/Solution145.java)
 
-##### 思路
+##### 代码说明
 
 1. 如果根节点为空，直接返回空列表。
 2. 否则，先递归遍历左子树，将左子树的后序遍历结果存入结果列表中。
@@ -1146,7 +1146,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution102.java)
 
-##### 思路
+##### 代码说明
 
 1. 定义一个队列，将根节点加入队列中。
 
@@ -1166,7 +1166,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution107.java)
 
-##### 思路
+##### 代码说明
 
 按照自顶向下的层序遍历方法，然后将每层的节点值插入到结果数组的前面，这样最终得到的数组就是自底向上的层序遍历。
 
@@ -1190,7 +1190,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution199.java)
 
-##### 思路
+##### 代码说明
 
 按层遍历二叉树，在每一层选择最右侧的节点，将其值加入结果数组中。具体步骤如下
 
@@ -1212,7 +1212,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution637.java)
 
-##### 思路
+##### 代码说明
 
 按层遍历二叉树，在每一层将节点的值加起来，然后求平均值，并将平均值加入结果数组中。
 
@@ -1238,7 +1238,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution429.java)
 
-##### 思路
+##### 代码说明
 
 可以按层遍历 N 叉树，在每一层将节点的值加入结果数组中，并将节点的所有子节点加入队列中。具体步骤如下
 
@@ -1262,7 +1262,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution515.java)
 
-##### 思路
+##### 代码说明
 
 可以按层遍历二叉树，在每一层找出节点值的最大值，并将其加入结果数组中。具体步骤如下
 
@@ -1286,7 +1286,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution116.java)
 
-##### 思路
+##### 代码说明
 
 从根节点开始，逐层遍历二叉树。对于每一层，可以记录下一层的第一个节点，然后在遍历当前层时，将每个节点的 next 指针指向其在同层中的下一个节点，这可以通过队列的先进先出（FIFO）特性来实现。
 
@@ -1294,7 +1294,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution117.java)
 
-##### 思路
+##### 代码说明
 
 这道题目是上一题的扩展版，但是不再是完美二叉树。不同的是，由于这不再是一棵完美二叉树，需要在遍历每个节点时，将其左右子树中的节点添加到队列中，以确保其右侧节点的指针正确连接。
 
@@ -1302,7 +1302,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution104.java)
 
-##### 思路
+##### 代码说明
 
 使用 DFS，可以递归地遍历每个节点，并将深度作为参数传递。当遇到叶子节点时，返回当前深度。最终，将通过比较每个节点的深度来得到最大深度。
 
@@ -1312,7 +1312,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution111.java)
 
-##### 思路
+##### 代码说明
 
 要求二叉树的最小深度，需要考虑一些特殊情况
 
@@ -1327,7 +1327,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution101.java)
 
-#### 思路
+#### 代码说明
 
 对于一个二叉树，如果它的左子树和右子树轴对称，那么这棵二叉树是轴对称的。
 
@@ -1339,7 +1339,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution100.java)
 
-#### 思路
+#### 代码说明
 
 - 如果两个节点都为 null，则说明此节点相同，返回 true。
 - 如果两个节点中有一个为 null，则说明此节点不同，返回 false。
@@ -1350,7 +1350,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution572.java)
 
-#### 思路
+#### 代码说明
 
 编写一个函数 `isSameTree`，用来判断两棵树是否相同。然后可以遍历树 `root`，对于每个节点，都调用 `isSameTree` 判断其是否与 `subRoot` 相同。如果相同，返回 true；如果不同，分别在左右子树中继续查找。
 
@@ -1362,7 +1362,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution104.java)
 
-#### 思路
+#### 代码说明
 
 使用 DFS，可以递归地遍历每个节点，并将深度作为参数传递。当遇到叶子节点时，返回当前深度。最终，将通过比较每个节点的深度来得到最大深度。
 
@@ -1372,7 +1372,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution111.java)
 
-#### 思路
+#### 代码说明
 
 要求二叉树的最小深度，需要考虑一些特殊情况
 
@@ -1385,7 +1385,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution222.java)
 
-#### 思路
+#### 代码说明
 
 由于完全二叉树的性质，通过比较左右子树的高度来判断最后一层是否填满。如果左右子树的高度相同，则最后一层节点一定在右子树中；否则，最后一层节点一定在左子树中。因此，可以将问题转化为分别求解左右子树的节点个数。
 
@@ -1399,7 +1399,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution110.java)
 
-#### 思路
+#### 代码说明
 
 对于每个节点，都计算其左右子树的高度差，如果高度差超过了1，就返回False，否则递归判断它的左右子树是否也满足高度平衡的条件。
 
@@ -1407,7 +1407,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution257.java)
 
-#### 思路
+#### 代码说明
 
 使用DFS（深度优先搜索）。
 
@@ -1419,7 +1419,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution404.java)
 
-#### 思路
+#### 代码说明
 
 首先判断根节点是为空，如果是，则返回0；然后初始化左叶子节点的和为0；如果左子树不为空，则判断其是否为左叶子节点，如果是，则将其值加入到和中；如果不是，则递归遍历左子树。最后，递归遍历右子树并将其结果加入到和中，最后返回左叶子节点的和。
 
@@ -1427,7 +1427,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution513.java)
 
-#### 思路
+#### 代码说明
 
 可以使用 BFS 遍历二叉树，每次遍历完一层后，记录该层的最左边节点的值。最后返回最后一层的最左边节点的值。
 
@@ -1435,7 +1435,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution112.java)
 
-#### 思路
+#### 代码说明
 
 从根节点开始，对于每个节点，先将目标值减去当前节点的值，然后递归地搜索其左右子树。如果当前节点是叶子节点，并且目标值等于当前节点的值，则说明存在一条根节点到叶子节点的路径，使得路径上所有节点值相加等于目标和。否则，如果当前节点不是叶子节点，则继续搜索其左右子树，直到找到叶子节点或搜索完整棵树为止。
 
@@ -1443,7 +1443,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution700.java)
 
-#### 思路
+#### 代码说明
 
 根据BST的性质，如果当前节点值小于val，则递归搜索右子树，如果当前节点值大于val，则递归搜索左子树，如果当前节点值等于val，则直接返回该节点即可。如果最终未找到节点，返回null。
 
@@ -1451,7 +1451,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution98.java)
 
-#### 思路
+#### 代码说明
 
 过递归判断每个节点是否满足二叉搜索树的定义。
 
@@ -1461,7 +1461,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution530.java)
 
-#### 思路
+#### 代码说明
 
 采用中序遍历的方式遍历二叉搜索树，这样得到的遍历结果就是按照从小到大的顺序排列的。然后再遍历一次这个数组，计算任意两个相邻元素之间的差值，找到其中最小的差值即可。
 
@@ -1469,7 +1469,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution501.java)
 
-#### 思路
+#### 代码说明
 
 通过中序遍历BST并用HashMap统计每个元素的出现次数，然后找出出现次数最多的元素，即为众数。
 
@@ -1485,7 +1485,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution226.java)
 
-#### 思路
+#### 代码说明
 
 可以通过递归实现二叉树的翻转，具体做法是将左右子树分别递归地翻转，然后交换左右子树的位置。
 
@@ -1495,7 +1495,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution106.java)
 
-#### 思路
+#### 代码说明
 
 后序遍历中，最后一个元素一定是根节点，根据根节点在中序遍历中的位置可以将中序遍历分为左子树和右子树两部分。接下来分别递归构建左子树和右子树，最后将左右子树连接到根节点上，构建完整的二叉树。
 
@@ -1503,7 +1503,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution654.java)
 
-#### 思路
+#### 代码说明
 
 对于给定的数组 nums，首先找到其中的最大值，将其作为根节点，然后将数组分为左右两个部分，递归地构建左子树和右子树。每次递归时，传入数组的左右边界即可。当左边界大于右边界时，返回null即可结束递归。
 
@@ -1511,7 +1511,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution617.java)
 
-#### 思路
+#### 代码说明
 
 递归地合并两棵二叉树。如果两个节点都不为 null，则合并它们的值，并继续递归合并它们的左右子树；如果其中一个节点为 null，则直接返回另一个节点。递归结束的条件是，两个节点都为 null。
 
@@ -1519,7 +1519,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution701.java)
 
-#### 思路
+#### 代码说明
 
 对于每个节点，如果要插入的值小于当前节点的值，则将其插入到左子树中；如果要插入的值大于当前节点的值，则将其插入到右子树中。递归插入后返回根节点即可。如果根节点为空，则直接将要插入的值作为根节点返回。由于插入后仍保持为二叉搜索树，因此返回任意一个有效结果即可。
 
@@ -1527,7 +1527,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution450.java)
 
-#### 思路
+#### 代码说明
 
 从根节点开始查找要删除的节点，如果当前节点的值等于要删除的值，则将其删除。删除节点时，需要考虑以下三种情况
 
@@ -1539,7 +1539,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution669.java)
 
-#### 思路
+#### 代码说明
 
 由于二叉搜索树的性质，当当前节点的值小于low时，需要将其右子树保留，去修剪左子树；当当前节点的值大于high时，需要将其左子树保留，去修剪右子树；当当前节点的值在[low, high]范围内时，需要同时修剪左子树和右子树。
 
@@ -1554,7 +1554,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution108.java)
 
-#### 思路
+#### 代码说明
 
 使用递归的方式将一个有序数组转换为一棵高度平衡的二叉搜索树。每次选取数组的中间元素作为根节点，左半部分作为左子树，右半部分作为右子树，然后递归构建左右子树。
 
@@ -1562,7 +1562,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution538.java)
 
-#### 思路
+#### 代码说明
 
 使用反向中序遍历（从右到左）二叉搜索树的方式实现。具体来说，对于二叉搜索树中的一个节点，可以通过反向中序遍历先访问右子树，再累加到当前节点，最后访问左子树。
 
@@ -1581,7 +1581,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/ancestor/Solution236.java)
 
-#### 思路
+#### 代码说明
 
 通过递归的方式求解二叉树中两个节点的最近公共祖先。对于每个节点，判断其左右子树中是否包含目标节点，若包含，则返回该子树的最近公共祖先；若不包含，则返回当前节点。
 
@@ -1598,7 +1598,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/ancestor/Solution235.java)
 
-#### 思路
+#### 代码说明
 
 在二叉搜索树中，如果节点`p`和`q`分别位于当前节点的左子树和右子树中，那么当前节点就是它们的最近公共祖先，如果它们都在当前节点的左子树中，则递归左子树查找，如果它们都在右子树中，则递归右子树查找。因为二叉搜索树的特性，如果当前节点的值比`p`和`q`都大，那么它们肯定都在左子树中，如果比它们都小，那么它们肯定都在右子树中。
 
@@ -1612,7 +1612,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution77.java)
 
-#### 思路
+#### 代码说明
 
 回溯法，通过递归地尝试每个数字来构建组合。
 
@@ -1630,7 +1630,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution216.java)
 
-#### 思路
+#### 代码说明
 
 使用回溯算法来解决。可以从数字 1 到 9 中选择 k 个数字，递归地搜索下去，直到数字和等于 n 或者超过 n。在搜索过程中，为了避免重复，需要保证每个数字只被选一次，因此需要用一个布尔数组来记录每个数字是否已经被选过。
 
@@ -1638,7 +1638,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution17.java)
 
-#### 思路
+#### 代码说明
 
 使用回溯算法来解决。可以用一个 HashMap 来存储每个数字对应的所有字母，然后从字符串的第一个数字开始，递归地生成所有可能的字母组合。在递归的过程中，需要遍历当前数字对应的所有字母，将其添加到当前组合中，并递归生成下一位数字的组合。当组合长度达到字符串长度时，将当前组合添加到结果中。
 
@@ -1646,7 +1646,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution39.java)
 
-#### 思路
+#### 代码说明
 
 使用回溯法来找到所有可能的组合，先将候选数数组进行排序，然后从数组的起始位置开始搜索。
 
@@ -1660,7 +1660,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution40.java)
 
-#### 思路
+#### 代码说明
 
 在搜索过程中保证同一个候选数只能被使用一次。
 
@@ -1676,7 +1676,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/arrangement/Solution46.java)
 
-#### 思路
+#### 代码说明
 
 在`backtrack`方法中，首先检查当前排列的长度是否等于数组的长度，如果是，则将当前排列添加到结果集`permutations`中。
 
@@ -1688,7 +1688,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/arrangement/Solution47.java)
 
-#### 思路
+#### 代码说明
 
 在`backtrack`方法中，首先检查当前排列的长度是否等于数组的长度，如果是，则将当前排列添加到结果集`permutations`中。
 
@@ -1702,7 +1702,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/arrangement/Solution332.java)
 
-#### 思路
+#### 代码说明
 
 首先构建一个邻接表来表示每个机场和其对应的目的地机场。使用`Map<String, PriorityQueue<String>>`来存储邻接表，其中每个机场对应的目的地机场使用优先队列进行存储，以保证按字典序进行排序。
 
@@ -1720,7 +1720,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/partition/Solution131.java)
 
-#### 思路
+#### 代码说明
 
 和之前的实现非常相似，唯一的区别在于判断子串是否为回文串时使用了`isPalindrome`函数。`isPalindrome`函数用来判断`s`从`start`到`end`位置的子串是否为回文串，具体实现是使用双指针从两端开始向中间移动，判断对应的字符是否相等。
 
@@ -1732,7 +1732,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/partition/Solution93.java)
 
-#### 思路
+#### 代码说明
 
 可以将IP地址分成4个段，每个段都有一个范围：0-255，对于每一个段，可以枚举所有可能的长度，然后判断其是否合法（即不含有前导0且不大于255），如果合法，则将其加入到中间结果中，并递归地搜索下一段，否则直接返回。当找到了4个合法的IP地址段，并且整个字符串都被扫描完了，则将当前中间结果加入到最终结果中。
 
@@ -1748,7 +1748,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/subset/Solution78.java)
 
-#### 思路
+#### 代码说明
 
 在`subsets`方法中，初始化一个空的结果集`subsets`，然后调用`backtrack`方法生成所有可能的子集。`backtrack`方法采用递归的方式生成子集。
 
@@ -1758,7 +1758,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/subset/Solution90.java)
 
-#### 思路
+#### 代码说明
 
 首先对数组进行排序，以确保重复元素相邻。然后，在`backtrack`方法中，通过添加判断条件跳过重复的元素。具体而言，如果当前元素与前一个元素相同（即`nums[i] == nums[i - 1]`），并且不是从起点开始（即`i > start`），则跳过当前元素。这样可以避免生成重复的子集。
 
@@ -1766,7 +1766,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/subset/Solution90.java)
 
-#### 思路
+#### 代码说明
 
 使用回溯算法来生成所有可能的递增子序列。在`backtrack`方法中，首先检查当前子序列的长度，如果长度大于等于2，则将其添加到结果集`subsequences`中。
 
@@ -1784,7 +1784,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/checkerboard/Solution51.java)
 
-#### 思路
+#### 代码说明
 
 用的方法肯定是回溯啦！
 
@@ -1804,7 +1804,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/checkerboard/Solution37.java)
 
-#### 思路
+#### 代码说明
 
 使用一个9x9的二维字符数组`board`来表示数独棋盘。
 
@@ -1826,7 +1826,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/easy/Solution455.java)
 
-#### 思路
+#### 代码说明
 
 首先，对孩子的胃口值数组`g`和饼干的尺寸数组`s`进行排序，以便从小到大进行匹配。
 
@@ -1838,7 +1838,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/easy/Solution1005.java)
 
-##### 思路
+##### 代码说明
 
 首先对数组进行排序，然后遍历数组，将负数变为正数，直到负数用完或者达到k次操作。
 
@@ -1850,7 +1850,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/easy/Solution860.java)
 
-#### 思路
+#### 代码说明
 
 使用两个变量`fiveCount`和`tenCount`分别记录手头的5美元和10美元的数量。
 
@@ -1868,7 +1868,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/Solution376.java)
 
-##### 思路
+##### 代码说明
 
 首先，处理特殊情况，如果数组长度小于2，则最长摆动子序列长度即为数组长度。
 
@@ -1880,7 +1880,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/Solution738.java)
 
-#### 思路
+#### 代码说明
 
 首先，将整数`n`转换为字符数组`digits`。
 
@@ -1896,7 +1896,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/stock/Solution122.java)
 
-##### 思路
+##### 代码说明
 
 收集每天的正利润就可以，**收集正利润的区间，就是股票买卖的区间，而我们只需要关注最终利润，不需要记录区间**。
 
@@ -1908,7 +1908,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/stock/Solution714.java)
 
-##### 思路
+##### 代码说明
 
 首先，定义两个变量`cash`和`hold`，分别表示当前手中的现金和当前持有股票的价值。
 
@@ -1925,7 +1925,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/balance/Solution135.java)
 
-##### 思路
+##### 代码说明
 
 首先初始化每个孩子的糖果数为1。
 
@@ -1939,7 +1939,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/balance/Solution406.java)
 
-##### 思路
+##### 代码说明
 
 首先对输入数组`people`进行排序，排序规则为按照身高降序排序，如果身高相同则按照ki升序排序。
 
@@ -1955,7 +1955,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution55.java)
 
-##### 思路
+##### 代码说明
 
 使用变量`maxReach`来记录当前能够到达的最远位置。
 
@@ -1969,7 +1969,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution45.java)
 
-##### 思路
+##### 代码说明
 
 使用变量`jumps`来记录跳跃次数，`currEnd`来记录当前能够到达的最远位置，`currFarthest`来记录当前能够到达的最远距离。
 
@@ -1983,7 +1983,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution452.java)
 
-##### 思路
+##### 代码说明
 
 首先对输入数组`points`进行排序，排序规则为按照气球的结束坐标进行升序排序。
 
@@ -1999,7 +1999,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution435.java)
 
-##### 思路
+##### 代码说明
 
 首先对输入数组`intervals`进行排序，排序规则为按照区间的结束位置进行升序排序。
 
@@ -2015,7 +2015,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution763.java)
 
-##### 思路
+##### 代码说明
 
 首先，创建一个长度为26的数组`lastIndices`，用于记录每个字母最后出现的位置。
 
@@ -2031,7 +2031,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution56.java)
 
-##### 思路
+##### 代码说明
 
 首先，根据区间的起始位置对数组`intervals`进行排序。
 
@@ -2051,7 +2051,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/other/Solution53.java)
 
-##### 思路
+##### 代码说明
 
 使用两个变量`maxSum`和`currSum`来记录最大子数组和和当前子数组和。
 
@@ -2067,7 +2067,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/other/Solution134.java)
 
-##### 思路
+##### 代码说明
 
 遍历加油站，并计算总的剩余汽油量和当前剩余汽油量。
 
@@ -2079,7 +2079,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/other/Solution968.java)
 
-##### 思路
+##### 代码说明
 
 首先，创建一个计数器`cameras`，用于记录摄像头的数量。
 
@@ -2101,7 +2101,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/basic/Solution509.java)
 
-#### 思路
+#### 代码说明
 
 - 我们使用一个数组 `dp` 来保存计算过的斐波那契数。
 - 首先，判断如果 `n` 小于等于 1，则直接返回 `n`。
@@ -2117,7 +2117,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/basic/Solution70.java)
 
-#### 思路
+#### 代码说明
 
 - 我们使用一个数组 `dp` 来保存到达每个台阶的方法数。
 - 首先，判断如果 `n` 小于等于 2，则直接返回 `n`。
@@ -2133,7 +2133,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/basic/Solution746.java)
 
-#### 思路
+#### 代码说明
 
 - 我们使用一个数组 `dp` 来保存达到每个台阶的最低花费。
 - 初始状态：到达第一个台阶和第二个台阶的最低花费分别为 `cost[0]` 和 `cost[1]`。
@@ -2148,7 +2148,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/basic/Solution62.java)
 
-#### 思路
+#### 代码说明
 
 - 我们使用一个二维数组 `dp` 来保存到达每个网格的路径数。
 - 首先，初始化边界条件：第一行和第一列的路径数都为 1，因为机器人只能向下或向右移动一步。
@@ -2163,7 +2163,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/basic/Solution63.java)
 
-#### 思路
+#### 代码说明
 
 - 我们使用一个二维数组 `dp` 来保存到达每个网格的路径数。
 - 首先，处理起始位置和障碍物情况：如果起始位置有障碍物，则无法到达终点，返回0；否则，将起始位置标记为1，表示可达。
@@ -2179,7 +2179,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/basic/Solution343.java)
 
-#### 思路
+#### 代码说明
 
 - 我们使用一个数组 `dp` 来保存拆分整数 i 可获得的最大乘积。
 - 初始状态：拆分整数 1 的最大乘积为 1。
@@ -2195,7 +2195,7 @@ DFS结束后，将机场添加到行程中。
 
 [代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/basic/Solution96.java)
 
-#### 思路
+#### 代码说明
 
 - 我们使用一个数组 `dp` 来保存节点数为 i 的二叉搜索树的种数。
 - 初始状态：节点数为 0 和 1 的二叉搜索树的种数都为 1。
@@ -2207,3 +2207,239 @@ DFS结束后，将机场添加到行程中。
 **时间复杂度**：O($n^2$)
 
 **空间复杂度**：O($n$)
+
+## 背包问题
+
+### 416. 分割等和子集
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution416.java)
+
+#### 代码说明
+
+- 首先，计算数组的元素和 sum。
+- 如果 sum 是奇数，无法分割成两个和相等的子集，直接返回 false。
+- 如果 sum 是偶数，将问题转化为是否能找到数组中的一部分元素，使其和等于 sum / 2。
+- 创建一个二维数组 `dp`，`dp[i][j]` 表示前 i 个数能否组成和为 j。
+- 初始化边界条件，前 0 个数能够组成和为 0。
+- 逐步计算前 i 个数能否组成和为 j。
+- 对于第 i 个数，如果当前数 `nums[i-1]` 大于目标和 j，则无法选择当前数，取决于前 i-1 个数能否组成和为 j。
+- 否则，可以选择当前数或不选择当前数，取决于前 i-1 个数能否组成和为 j 或前 i-1 个数能否组成和为 j - `nums[i-1]`。
+- 最终，返回 `dp[n][target]`，即前 n 个数能否组成和为 target。
+
+**时间复杂度分析**
+
+- 在两个嵌套的循环中，我们需要计算每个子问题的结果，每个子问题的计算都需要常数时间。
+- 因此，**时间复杂度**为 O($n * target$)，其中 n 是数组的长度，target 是数组元素和的一半。
+
+**空间复杂度分析**
+
+- 我们使用了一个二维数组 `dp` 来保存前 i 个数能否组成和为 j，数组的大小为 $(n+1) * (target+1)$。
+- 因此，**空间复杂度**为 O($n * target$)。
+
+### 1049.最后一块石头的重量 II
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution1049.java)
+
+#### 代码说明
+
+- 首先，计算石头的总重量 sum。
+- 我们的目标是选出一些石头，使得剩下的石头重量尽可能接近 sum / 2。
+- 创建一个布尔型数组 `dp`，`dp[j]` 表示是否能够得到重量为 j 的石头。
+- 初始化边界条件，重量为 0 的石头总是能够得到。
+- 逐步计算能够得到重量为 j 的石头，遍历每个石头的重量。
+- 对于第 i 个石头，如果能够得到重量为 j - stones[i] 的石头，那么就可以得到重量为 j 的石头。
+- 最终，找到最大的 j，使得 `dp[j]` 为 true，计算最小的可能重量为 `sum - 2 * j`。
+
+**时间复杂度分析**
+
+- 在两个嵌套的循环中，我们需要计算每个子问题的结果，每个子问题的计算都需要常数时间。
+- 因此，时间复杂度为 O($n * (sum / 2)$)，其中 n 是石头的个数，sum 是石头的总重量。
+
+**空间复杂度分析**
+
+- 我们使用了一个一维数组 `dp` 来保存是否能够得到重量为 j 的石头，数组的大小为 target+1。
+- 因此，空间复杂度为 O($sum / $2)。
+
+### 494. 目标和
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution494.java)
+
+#### 代码说明
+
+- 首先，计算数组的总和 sum。
+- 如果总和小于目标值 target，或者总和与目标值之和为奇数，无法得到目标值，直接返回 0。
+- 对于存在负数的情况，我们将问题转化为在数组中选择一些元素，使其和等于$ (sum + target) / 2$。
+- 如果总和小于目标值 target，或者总和与目标值之差为奇数，无法得到目标值，直接返回 0。
+- 创建一个一维数组 `dp`，`dp[i]` 表示凑成和为 i 的方式数。
+- 初始化边界条件，凑成和为 0 的方式数为 1。
+- 逐步计算凑成和为 i 的方式数，遍历每个元素。
+- 对于第 i 个元素，如果能够凑成和为 `j - nums[i]` 的方式数，那么就可以凑成和为 j 的方式数。
+- 最终，返回 `dp[newTarget]`，即凑成和为 newTarget 的方式数。
+
+**时间复杂度分析**
+
+- 在两个嵌套的循环中，我们需要计算每个子问题的结果，每个子问题的计算都需要常数时间。
+- 因此，时间复杂度为 O($n * newTarget$)，其中 n 是数组的长度，newTarget 是凑成的目标和。
+
+**空间复杂度分析**
+
+- 我们使用了一个一维数组 `dp` 来保存凑成和为 i 的方式数，数组的大小为 newTarget+1。
+- 因此，空间复杂度为 O($newTarget$)。
+
+### 474.一和零
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution474.java)
+
+#### 代码说明
+
+- 创建一个二维数组 `dp`，`dp[i][j]` 表示最多有 `i` 个 0 和 `j` 个 1 的最大子集的长度。
+- 初始化 `dp` 数组的所有元素为 0。
+- 遍历给定的字符串数组 `strs`，对于每个字符串，统计其中 0 和 1 的个数。
+- 根据当前字符串的 0 和 1 的个数，更新动态规划数组 `dp`。通过从后往前遍历 `dp` 数组，使用递推关系 `dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)` 更新最大子集的长度。
+- 最终，`dp[m][n]` 即为最大子集的长度。
+
+**时间复杂度分析**
+
+- 外层循环遍历字符串数组 `strs`，时间复杂度为 O($k$)，其中 `k` 是字符串数组的长度。
+- 内层循环遍历动态规划数组 `dp`，时间复杂度为 O($m * n$)。
+- 统计每个字符串的 0 和 1 的个数的操作时间复杂度为 O($len$)，其中 `len` 是字符串的长度。
+- 因此，总的时间复杂度为 O($k * m * n * len$)。
+
+**空间复杂度分析**
+
+- 使用了一个二维数组 `dp`，空间复杂度为 O($m * n$)。
+
+### 518.零钱兑换II
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution518.java)
+
+#### 代码说明
+
+- 创建一个一维数组 `dp`，`dp[i]` 表示凑成总金额为 i 的硬币组合数。
+- 初始化边界条件，凑成总金额为 0 的硬币组合数为 1。
+- 对于每个硬币面额，遍历金额从硬币面额到总金额的所有可能情况。
+- 对于每个金额 `i`，通过加上当前硬币面额可以得到总金额 `i` 的硬币组合数，即 `dp[i] += dp[i - coin]`。
+- 最终，返回 `dp[amount]`，即凑成总金额为 `amount` 的硬币组合数。
+
+**时间复杂度分析**
+
+- 在两个嵌套的循环中，我们需要计算每个子问题的结果，每个子问题的计算都需要常数时间。
+- 因此，时间复杂度为 O($amount * n$)，其中 amount 是总金额，n 是硬币的面额数。
+
+**空间复杂度分析**
+
+- 我们使用了一个一维数组 `dp` 来保存硬币组合数，数组的大小为 amount+1。
+- 因此，空间复杂度为 O($amount$)。
+
+### 377.组合总和IV
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution377.java)
+
+#### 代码说明
+
+- 创建一个一维数组 `dp`，`dp[i]` 表示总和为 i 的元素组合个数。
+- 初始化边界条件，总和为 0 的元素组合个数为 1。
+- 对于每个目标和 `i`，遍历数组 `nums` 中的所有元素。
+- 对于每个元素 `num`，如果 `i` 大于等于 `num`，则可以使用 `num` 得到总和为 `i` 的元素组合个数为 `dp[i - num]`，累加到 `dp[i]` 上。
+- 最终，返回 `dp[target]`，即总和为 `target` 的元素组合个数。
+
+**时间复杂度分析**
+
+- 使用两个嵌套的循环，外层循环迭代了 `target` 次，内层循环迭代了 `nums` 数组的元素个数次。
+- 因此，时间复杂度为 O($target * n$)，其中 target 是目标和，n 是数组 `nums` 的元素个数。
+
+**空间复杂度分析**
+
+- 我们使用了一个一维数组 `dp` 来保存元素组合个数，数组的大小为 target+1。
+- 因此，空间复杂度为 O($target$)。
+
+### 70.爬楼梯
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution70.java)
+
+#### 代码说明
+
+- 创建一个一维数组 `dp`，`dp[i]` 表示爬到第 `i` 阶楼梯的方法数。
+- 初始化边界条件，当楼梯数 `n` 小于等于 2 时，爬楼梯的方法数即为 `n`。
+- 对于每个楼梯阶数 `i`，可以从第 `i-1` 阶楼梯爬一步到达，或者从第 `i-2` 阶楼梯跨两步到达，因此爬到第 `i` 阶楼梯的方法数为 `dp[i-1] + dp[i-2]`。
+- 最终，返回 `dp[n]`，即爬到第 `n` 阶楼梯的方法数。
+
+**时间复杂度分析**
+
+- 使用一个循环，迭代了 `n` 次。
+- 因此，时间复杂度为 O($n$)。
+
+**空间复杂度分析**
+
+- 我们使用了一个一维数组 `dp` 来保存楼梯的方法数，数组的大小为 n+1。
+- 因此，空间复杂度为 O($n$)。
+
+### 322.零钱兑换
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution322.java)
+
+#### 代码说明
+
+- 创建一个一维数组 `dp`，`dp[i]` 表示凑成金额 `i` 所需的最少硬币个数。
+- 初始化 `dp` 数组，将所有元素初始化为 `amount + 1`，表示一个不可能的大数。
+- 设置边界条件，凑成金额为 0 所需的硬币个数为 0。
+- 对于每个金额 `i`，遍历硬币数组 `coins` 中的每个硬币面额。
+- 如果 `i` 大于等于当前硬币面额 `coin`，则需要考虑使用当前硬币进行凑成金额 `i`，更新 `dp[i]` 为当前硬币使用数量和之前凑成金额 `i - coin` 所需硬币数量加一的最小值。
+- 最终，返回 `dp[amount]`，如果 `dp[amount]` 大于 `amount`，表示无法凑成总金额，返回 -1，否则返回凑成总金额所需的最少硬币个数。
+
+**时间复杂度分析**
+
+- 使用两个嵌套的循环，外层循环迭代了 `amount` 次，内层循环迭代了 `coins` 数组的元素个数次。
+- 因此，时间复杂度为 O($amount * n$)，其中 amount 是总金额，n 是硬币数组 `coins` 的元素个数。
+
+**空间复杂度分析**
+
+- 我们使用了一个一维数组 `dp` 来保存凑成金额所需的最少硬币个数，数组的大小为 amount+1。
+- 因此，空间复杂度为 O($amount$)。
+
+### 279.完全平方数
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution279.java)
+
+#### 代码说明
+
+- 创建一个一维数组 `dp`，`dp[i]` 表示凑成数字 `i` 的完全平方数的最少数量。
+- 初始化 `dp` 数组，将所有元素初始化为一个较大的数（这里使用 `Integer.MAX_VALUE`）。
+- 设置边界条件，凑成数字 0 的完全平方数的最少数量为 0。
+- 对于每个数字 `i`，遍历从 1 到 `i` 的完全平方数，计算出凑成 `i` 的最少数量，更新 `dp[i]` 为之前的最小数量加一。
+- 最终，返回 `dp[n]`，即凑成数字 `n` 的完全平方数的最少数量。
+
+**时间复杂度分析**
+
+- 使用两个嵌套的循环，外层循环迭代了 `n` 次，内层循环迭代了从 1 到 `n` 的完全平方数个数次。
+- 因此，时间复杂度为 O($n\sqrt{n}$)
+
+**空间复杂度分析**
+
+- 我们使用了一个一维数组 `dp` 来保存凑成数字的完全平方数的最少数量，数组的大小为 n+1。
+- 因此，空间复杂度为 O($n$)。
+
+### 139.单词拆分
+
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/09-DynamicProgramming/src/main/java/com/xin/backpack/Solution139.java)
+
+#### 代码说明
+
+- 创建一个布尔型数组 `dp`，`dp[i]` 表示字符串的前 `i` 个字符是否可以拆分成字典中的单词。
+- 初始化 `dp` 数组，将所有元素初始化为 `false`。
+- 设置边界条件，空字符串可以拆分成字典中的单词，因此 `dp[0]` 为 `true`。
+- 对于每个位置 `i`，遍历从 0 到 `i-1` 的位置 `j`，判断前 `j` 个字符是否可以拆分成字典中的单词，并且 `j` 到 `i` 的子串也在字典中。
+- 如果满足上述条件，则将 `dp[i]` 设置为 `true`，表示前 `i` 个字符可以拆分成字典中的单词。
+- 最终，返回 `dp[n]`，即整个字符串是否可以拆分成字典中的单词。
+
+**时间复杂度分析**
+
+- 使用两个嵌套的循环，外层循环迭代了 `n` 次，内层循环迭代了从 0 到 `i-1` 的位置次数。
+- 在内层循环中，使用了字符串的子串操作，其时间复杂度为 O(n)。
+- 因此，总的时间复杂度为 O($n^2 * k$)，其中 `n` 是字符串的长度，`k` 是字典中单词的平均长度。
+
+**空间复杂度分析**
+
+- 我们使用了一个布尔型数组 `dp` 来保存前 `i` 个字符是否可以拆分成字典中的单词，数组的大小为 n+1。
+- 另外，我们使用了一个哈希集合 `wordSet` 来存储字典中的单词，其大小取决于字典的单词数量和平均长度。
+- 因此，空间复杂度为 O($n + k$)，其中 `n` 是字符串的长度，`k` 是字典中单词的平均长度。
