@@ -12,12 +12,12 @@ public class Solution494 {
             sum += num;
         }
 
-        // 如果总和小于目标值，或者总和与目标值之和为奇数，无法得到目标值
-        if (sum < target || (sum + target) % 2 != 0) {
+        // 如果总和小于目标值，或者总和与目标值之差为奇数，无法得到目标值
+        if (sum < target || (sum - target) % 2 != 0) {
             return 0;
         }
 
-        int newTarget = (sum + target) / 2;
+        int newTarget = (sum - target) / 2;
 
         // 创建一个一维数组 dp，dp[i] 表示凑成和为 i 的方式数
         int[] dp = new int[newTarget + 1];
