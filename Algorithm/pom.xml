@@ -12,8 +12,8 @@
         <module>0-Sort</module>
         <module>01-Array</module>
         <module>02-LinkList</module>
-        <module>03-String</module>
-        <module>04-Map</module>
+        <module>03-Map</module>
+        <module>04-String</module>
         <module>05-Stack_Queue</module>
         <module>06-BinaryTree</module>
         <module>07-Backtrack</module>

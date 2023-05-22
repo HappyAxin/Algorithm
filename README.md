@@ -6,7 +6,7 @@ LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://w
 
 
 
-# 排序
+# 00 - 排序
 
 | 算法     | 时间复杂度:最好 | 时间复杂度:平均 | 时间复杂度:最坏 | 空间复杂度:最坏 | 稳定性 |
 | -------- | --------------- | --------------- | --------------- | --------------- | ------ |
@@ -24,7 +24,7 @@ LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://w
 
 ### 冒泡排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/swapsort/BubbleSort.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/swapsort/BubbleSort.java)
 
 #### 思路
 
@@ -42,7 +42,7 @@ LeetCode算法代码及笔记，刷题顺序是跟着[代码随想录](https://w
 
 ### 快速排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/swapsort/QuickSort.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/swapsort/QuickSort.java)
 
 #### 思路
 
@@ -61,7 +61,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 ### 直接插入排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/insertsort/InsertionSort.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/insertsort/InsertionSort.java)
 
 #### 思路
 
@@ -81,7 +81,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 ### 希尔排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/insertsort/ShellSort.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/insertsort/ShellSort.java)
 
 #### 思路
 
@@ -101,7 +101,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 ### 简单选择排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/SelectionSort.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/SelectionSort.java)
 
 #### 思路
 
@@ -127,7 +127,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 ### 堆排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/HeapSort.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/HeapSort.java)
 
 #### 思路
 
@@ -160,7 +160,7 @@ Java 中实现快速排序可以通过递归实现，具体步骤如下：
 
 ### 归并排序
 
-[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/MergeSort.java)
+[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/MergeSort.java)
 
 #### 思路
 
@@ -220,7 +220,7 @@ public class MergeSort {
 
 ### 基数排序
 
-[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/RadixSort.java)
+[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/RadixSort.java)
 
 #### 思路
 
@@ -290,7 +290,7 @@ public class RadixSort {
 
 ### 桶排序
 
-[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/selectsort/BucketSort.java)
+[代码链接（优化）](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/selectsort/BucketSort.java)
 
 #### 思路
 
@@ -371,7 +371,7 @@ public class BucketSort {
 
 ### 实现并行归并排序
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Sort/src/main/java/com/xin/parallel/ParallelMergeSort.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/0-Sort/src/main/java/com/xin/parallel/ParallelMergeSort.java)
 
 #### 思路
 
@@ -401,13 +401,13 @@ Fork/Join框架的使用方法是：
 
 使用Fork/Join框架可以很方便地实现一些并行计算的问题，但需要注意的是，如果任务拆分得不够细，可能会导致工作线程的负载不均衡，影响并行计算的性能。因此，在使用Fork/Join框架时需要考虑任务的拆分粒度和负载均衡问题。
 
-# 数组
+# 01 - 数组
 
 ## 二分查找
 
 ### 704. 二分查找
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/binarysearch/Solution704.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution704.java)
 
 #### 思路
 
@@ -427,7 +427,7 @@ Fork/Join框架的使用方法是：
 
 ### 35. 搜索插入位置
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/binarysearch/Solution35.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution35.java)
 
 #### 思路
 
@@ -447,7 +447,7 @@ Fork/Join框架的使用方法是：
 
 ### 34. 在排序数组中查找元素的第一个和最后一个位置
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/binarysearch/Solution34.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution34.java)
 
 #### 思路
 
@@ -481,7 +481,7 @@ Fork/Join框架的使用方法是：
 
 ### 69. x 的平方根 
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/binarysearch/Solution69.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution69.java)
 
 #### 思路
 
@@ -493,7 +493,7 @@ Fork/Join框架的使用方法是：
 
 ### 367. 有效的完全平方数
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/binarysearch/Solution367.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/binarysearch/Solution367.java)
 
 #### 思路
 
@@ -505,7 +505,7 @@ Fork/Join框架的使用方法是：
 
 ### 27. 移除元素
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/doublepointer/Solution27.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution27.java)
 
 #### 思路
 
@@ -519,7 +519,7 @@ Fork/Join框架的使用方法是：
 
 ### 26. 删除排序数组中的重复项
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/doublepointer/Solution26.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution26.java)
 
 #### 思路
 
@@ -531,7 +531,7 @@ Fork/Join框架的使用方法是：
 
 ### 283. 移动零
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/doublepointer/Solution283.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution283.java)
 
 #### 思路
 
@@ -541,7 +541,7 @@ Fork/Join框架的使用方法是：
 
 ### 844. 比较含退格的字符串
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/doublepointer/Solution844.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution844.java)
 
 #### 思路
 
@@ -551,7 +551,7 @@ Fork/Join框架的使用方法是：
 
 ### 977. 有序数组的平方
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/doublepointer/Solution977.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/doublepointer/Solution977.java)
 
 #### 思路
 
@@ -563,7 +563,7 @@ Fork/Join框架的使用方法是：
 
 ### 209. 长度最小的子数组
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/slidingwindow/Solution209.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/slidingwindow/Solution209.java)
 
 #### 思路
 
@@ -577,7 +577,7 @@ Fork/Join框架的使用方法是：
 
 ### 904. 水果成篮
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/slidingwindow/Solution904.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/slidingwindow/Solution904.java)
 
 #### 思路
 
@@ -593,7 +593,7 @@ Fork/Join框架的使用方法是：
 
 ### 76. 最小覆盖子串
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/slidingwindow/Solution76.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/slidingwindow/Solution76.java)
 
 #### 思路
 
@@ -613,7 +613,7 @@ Fork/Join框架的使用方法是：
 
 ### 59.螺旋矩阵II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/mockaction/Solution59.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/mockaction/Solution59.java)
 
 #### 思路
 
@@ -627,7 +627,7 @@ Fork/Join框架的使用方法是：
 
 ### 54.螺旋矩阵
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/mockaction/Solution54.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/mockaction/Solution54.java)
 
 #### 思路
 
@@ -635,7 +635,7 @@ Fork/Join框架的使用方法是：
 
 ### Offer29. 顺时针打印矩阵
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Array/src/main/java/com/xin/mockaction/Offer29.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/01-Array/src/main/java/com/xin/mockaction/Offer29.java)
 
 #### 思路
 
@@ -646,13 +646,13 @@ Fork/Join框架的使用方法是：
 3. 每遍历完一条边界后，需要把相应的边界向内缩进一个单位，以便继续遍历下一条边界。
 4. 当所有数字都被遍历过后，返回结果数组即可。
 
-# 链表
+# 02 - 链表
 
 ## 设计链表
 
 ### 707.设计链表
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/LinkList/src/main/java/com/xin/base/Solution707.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/base/Solution707.java)
 
 #### 思路
 
@@ -669,7 +669,7 @@ Fork/Join框架的使用方法是：
 
 ### 203. 移除链表元素
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/LinkList/src/main/java/com/xin/dummyhead/Solution203.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/dummyhead/Solution203.java)
 
 #### 思路
 
@@ -683,7 +683,7 @@ Fork/Join框架的使用方法是：
 
 ### 24. 两两交换链表中的节点
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/LinkList/src/main/java/com/xin/dummyhead/Solution24.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/dummyhead/Solution24.java)
 
 #### 思路
 
@@ -693,7 +693,7 @@ Fork/Join框架的使用方法是：
 
 ### 19. 删除链表的倒数第 N 个结点
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/LinkList/src/main/java/com/xin/dummyhead/Solution19.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/dummyhead/Solution19.java)
 
 #### 思路
 
@@ -707,7 +707,7 @@ Fork/Join框架的使用方法是：
 
 ### 160.相交链表
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/LinkList/src/main/java/com/xin/intersection/Solution160.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/intersection/Solution160.java)
 
 #### 思路
 
@@ -729,7 +729,7 @@ Fork/Join框架的使用方法是：
 
 ### 142. 环形链表 II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/LinkList/src/main/java/com/xin/circle/Solution142.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/02-LinkList/src/main/java/com/xin/circle/Solution142.java)
 
 #### 思路
 
@@ -750,13 +750,13 @@ Fork/Join框架的使用方法是：
 1. 判断是否有环，并找到相遇点（快慢指针）
 2. 找到环的起点（使用一个新指针从链表头部开始遍历，同时从相遇点开始遍历，直到两个指针相遇）
 
-# 哈希表
+# 03 - 哈希表
 
 ## 数组作为哈希表
 
 ### 242. 有效的字母异位词
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution242.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution242.java)
 
 #### 思路
 
@@ -768,7 +768,7 @@ Fork/Join框架的使用方法是：
 
 ### 383.  赎金信
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution383.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution383.java)
 
 #### 思路
 
@@ -778,7 +778,7 @@ Fork/Join框架的使用方法是：
 
 ### 49. 字母异位词分组
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution49.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution49.java)
 
 #### 思路
 
@@ -788,7 +788,7 @@ Fork/Join框架的使用方法是：
 
 #### 438. 找到字符串中所有字母异位词
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/array/Solution438.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/array/Solution438.java)
 
 #### 思路
 
@@ -802,7 +802,7 @@ Fork/Join框架的使用方法是：
 
 ### 349. 两个数组的交集
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/set/Solution349.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/set/Solution349.java)
 
 #### 思路
 
@@ -810,7 +810,7 @@ Fork/Join框架的使用方法是：
 
 ### 350. 两个数组的交集 II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/set/Solution350.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/set/Solution350.java)
 
 #### 思路
 
@@ -824,7 +824,7 @@ Fork/Join框架的使用方法是：
 
 #### 202. 快乐数
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/set/Solution202.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/set/Solution202.java)
 
 #### 思路
 
@@ -842,7 +842,7 @@ Fork/Join框架的使用方法是：
 
 ### 1. 两数之和
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/map/Solution1.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/map/Solution1.java)
 
 #### 思路
 
@@ -850,7 +850,7 @@ Fork/Join框架的使用方法是：
 
 ### 454. 四数相加II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/map/Solution454.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/map/Solution454.java)
 
 #### 思路
 
@@ -860,7 +860,7 @@ Fork/Join框架的使用方法是：
 
 ### 15. 三数之和
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/doublepointer/Solution15.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/doublepointer/Solution15.java)
 
 #### 思路
 
@@ -872,7 +872,7 @@ Fork/Join框架的使用方法是：
 
 ### 18.四数之和
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Map/src/main/java/com/xin/doublepointer/Solution18.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/03-Map/src/main/java/com/xin/doublepointer/Solution18.java)
 
 #### 思路
 
@@ -884,13 +884,13 @@ Fork/Join框架的使用方法是：
 4. 如果三数之和的解为 [nums[i], nums[j], nums[k]]，则将该解添加到结果中。
 5. 注意去重，避免出现重复的解。
 
-# 字符串
+# 04 - 字符串
 
 ## 双指针
 
 ### 344.反转字符串
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/doublepointer/Solution344.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/doublepointer/Solution344.java)
 
 #### 思路
 
@@ -900,7 +900,7 @@ Fork/Join框架的使用方法是：
 
 ### 541.反转字符串II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/doublepointer/Solution541.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/doublepointer/Solution541.java)
 
 #### 思路
 
@@ -910,7 +910,7 @@ Fork/Join框架的使用方法是：
 
 ### 剑指Offer 05.替换空格
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/doublepointer/Offer05.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/doublepointer/Offer05.java)
 
 #### 思路
 
@@ -932,7 +932,7 @@ Fork/Join框架的使用方法是：
 
 ### 151.反转字符串中的单词
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/reverse/Solution151.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/reverse/Solution151.java)
 
 #### 思路
 
@@ -940,7 +940,7 @@ Fork/Join框架的使用方法是：
 
 ### 剑指 Offer 58 - II. 左旋转字符串
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/reverse/Offer58II.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/reverse/Offer58II.java)
 
 #### 思路
 
@@ -955,7 +955,7 @@ Fork/Join框架的使用方法是：
 
 ### 28.找出字符串中第一个匹配项的下标
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/kmp/Solution28.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/kmp/Solution28.java)
 
 #### 思路
 
@@ -965,7 +965,7 @@ Fork/Join框架的使用方法是：
 
 ### 459.重复的子字符串
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/String/src/main/java/com/xin/kmp/Solution459.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/04-String/src/main/java/com/xin/kmp/Solution459.java)
 
 #### 思路
 
@@ -973,7 +973,7 @@ Fork/Join框架的使用方法是：
 
 具体地，假设原字符串为s，长度为n，从小到大枚举i（i为子串长度），如果i是n的因数，那么将原字符串分割成 n/i 个长度为 i 的子串。如果这 n/i 个子串都相等，并且它们的值恰好为原字符串 s，那么就找到了符合要求的子串。
 
-# 栈与队列
+# 05 - 栈与队列
 
 ## 栈
 
@@ -981,7 +981,7 @@ Fork/Join框架的使用方法是：
 
 #### 71. 简化路径
 
-[代码链接](https://github.com/HappyAxin/Algorithm/tree/main/Algorithm/Stack_Queue/src/main/java/com/xin/stack/system)
+[代码链接](https://github.com/HappyAxin/Algorithm/tree/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/system)
 
 ##### 思路
 
@@ -997,7 +997,7 @@ Fork/Join框架的使用方法是：
 
 #### 20. 有效括号
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Stack_Queue/src/main/java/com/xin/stack/bracket/Solution20.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/bracket/Solution20.java)
 
 ##### 思路
 
@@ -1007,7 +1007,7 @@ Fork/Join框架的使用方法是：
 
 #### 1047.删除字符串中的所有相邻重复项
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Stack_Queue/src/main/java/com/xin/stack/deduplication/Solution1047.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/deduplication/Solution1047.java)
 
 ##### 思路
 
@@ -1017,7 +1017,7 @@ Fork/Join框架的使用方法是：
 
 #### 150.逆波兰表达式求值
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Stack_Queue/src/main/java/com/xin/stack/evalRPN/Solution150.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/stack/evalRPN/Solution150.java)
 
 ##### 思路
 
@@ -1034,7 +1034,7 @@ Fork/Join框架的使用方法是：
 
 #### 239.滑动窗口最大值
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Stack_Queue/src/main/java/com/xin/quene/array/Solution239.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/quene/array/Solution239.java)
 
 ##### 思路
 
@@ -1048,7 +1048,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 347.前k个高频元素
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Stack_Queue/src/main/java/com/xin/quene/priority/Solution347.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/05-Stack_Queue/src/main/java/com/xin/quene/priority/Solution347.java)
 
 ##### 思路
 
@@ -1058,7 +1058,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 2. 对哈希表中的元素按照出现次数进行桶排序，将出现次数相同的元素放在同一个桶中。
 3. 遍历桶，按照出现次数从大到小取出前 k 个元素。
 
-# 二叉树
+# 06 - 二叉树
 
 ## 遍历方式
 
@@ -1066,7 +1066,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 144.二叉树的前序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/recursion/Solution144.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/recursion/Solution144.java)
 
 ##### 思路
 
@@ -1079,7 +1079,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 94.二叉树的中序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/recursion/Solution94.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/recursion/Solution94.java)
 
 ##### 思路
 
@@ -1091,7 +1091,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 145.二叉树的后序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/recursion/Solution145.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/recursion/Solution145.java)
 
 ##### 思路
 
@@ -1105,7 +1105,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 144.二叉树的前序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/iteration/Solution144.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/iteration/Solution144.java)
 
 ##### 思路
 
@@ -1118,7 +1118,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 94.二叉树的中序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/iteration/Solution94.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/iteration/Solution94.java)
 
 ##### 思路
 
@@ -1130,7 +1130,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 145.二叉树的后序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/iteration/Solution145.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/iteration/Solution145.java)
 
 ##### 思路
 
@@ -1144,7 +1144,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 102. 二叉树的层序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution102.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution102.java)
 
 ##### 思路
 
@@ -1164,7 +1164,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 107. 二叉树的层序遍历II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution107.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution107.java)
 
 ##### 思路
 
@@ -1188,7 +1188,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 199. 二叉树的右视图
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution199.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution199.java)
 
 ##### 思路
 
@@ -1210,7 +1210,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 637. 二叉树的层平均值
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution637.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution637.java)
 
 ##### 思路
 
@@ -1236,7 +1236,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 429. N叉树的层序遍历
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution429.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution429.java)
 
 ##### 思路
 
@@ -1260,7 +1260,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 515. 在每个树中找最大值
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution515.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution515.java)
 
 ##### 思路
 
@@ -1284,7 +1284,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 116. 填充每个节点的下一个右侧节点指针
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution116.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution116.java)
 
 ##### 思路
 
@@ -1292,7 +1292,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 117. 填充每个节点的下一个右侧节点指针II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution117.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution117.java)
 
 ##### 思路
 
@@ -1300,7 +1300,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 104. 二叉树的最大深度
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution104.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution104.java)
 
 ##### 思路
 
@@ -1310,7 +1310,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 #### 111. 二叉树的最小深度
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution111.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/traversal/levelorder/Solution111.java)
 
 ##### 思路
 
@@ -1325,7 +1325,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 101.对称二叉树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution101.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution101.java)
 
 #### 思路
 
@@ -1337,7 +1337,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 100.相同的树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution100.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution100.java)
 
 #### 思路
 
@@ -1348,7 +1348,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 572.另一个树的子树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution572.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution572.java)
 
 #### 思路
 
@@ -1360,7 +1360,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 104.二叉树的最大深度
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution104.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution104.java)
 
 #### 思路
 
@@ -1370,7 +1370,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 111.二叉树的最小深度
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution111.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution111.java)
 
 #### 思路
 
@@ -1383,7 +1383,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 222.完全二叉树的节点个数
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution222.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution222.java)
 
 #### 思路
 
@@ -1397,7 +1397,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 110.平衡二叉树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution110.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution110.java)
 
 #### 思路
 
@@ -1405,7 +1405,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 257.二叉树的所有路径
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution257.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution257.java)
 
 #### 思路
 
@@ -1417,7 +1417,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 404.左叶子之和
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution404.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution404.java)
 
 #### 思路
 
@@ -1425,7 +1425,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 513.找树左下角的值
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution513.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution513.java)
 
 #### 思路
 
@@ -1433,7 +1433,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 112.路径总和
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution112.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution112.java)
 
 #### 思路
 
@@ -1441,7 +1441,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 700. 二叉搜索树中的搜索 
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution700.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution700.java)
 
 #### 思路
 
@@ -1449,7 +1449,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 98. 验证二叉搜索树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution98.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution98.java)
 
 #### 思路
 
@@ -1459,7 +1459,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 530.二叉搜索树的最小绝对差
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution530.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution530.java)
 
 #### 思路
 
@@ -1467,7 +1467,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 501.二叉搜索树中的众数
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/attributes/Solution501.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/attributes/Solution501.java)
 
 #### 思路
 
@@ -1483,7 +1483,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 226.翻转二叉树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution226.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution226.java)
 
 #### 思路
 
@@ -1493,7 +1493,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 106.从中序与后序遍历序列构造二叉树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution106.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution106.java)
 
 #### 思路
 
@@ -1501,7 +1501,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 654.最大二叉树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution654.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution654.java)
 
 #### 思路
 
@@ -1509,7 +1509,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 617. 合并二叉树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution617.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution617.java)
 
 #### 思路
 
@@ -1517,7 +1517,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 701.二叉搜索树中的插入操作
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution701.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution701.java)
 
 #### 思路
 
@@ -1525,7 +1525,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 450. 删除二叉搜索树中的节点
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution450.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution450.java)
 
 #### 思路
 
@@ -1537,7 +1537,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 669.修剪二叉搜索树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution669.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution669.java)
 
 #### 思路
 
@@ -1552,7 +1552,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 108. 将有序数组转换为二叉搜索树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution108.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution108.java)
 
 #### 思路
 
@@ -1560,7 +1560,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 538. 把二叉搜索树转换为累加树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution538.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/modificationAndConstruction/Solution538.java)
 
 #### 思路
 
@@ -1579,7 +1579,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 236. 二叉树的最近公共祖先
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/ancestor/Solution236.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/ancestor/Solution236.java)
 
 #### 思路
 
@@ -1596,7 +1596,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 235. 二叉搜索树的最近公共祖先
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/BinaryTree/src/main/java/com/xin/ancestor/Solution235.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/06-BinaryTree/src/main/java/com/xin/ancestor/Solution235.java)
 
 #### 思路
 
@@ -1604,13 +1604,13 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 其中，`root`为当前节点，`p`和`q`是需要查找的节点。首先判断当前节点是否为null或者是p或者q中的一个，如果是，直接返回当前节点。如果当前节点的值比`p`和`q`都大，那么递归左子树，否则递归右子树。
 
-# 回溯算法
+# 07 - 回溯算法
 
 ## 组合问题
 
 ### 77. 组合
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/combination/Solution77.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution77.java)
 
 #### 思路
 
@@ -1628,7 +1628,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 216. 组合总和 III
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/combination/Solution216.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution216.java)
 
 #### 思路
 
@@ -1636,7 +1636,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 17. 电话号码的字母组合 
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/combination/Solution17.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution17.java)
 
 #### 思路
 
@@ -1644,7 +1644,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 39. 组合总和
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/combination/Solution39.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution39.java)
 
 #### 思路
 
@@ -1658,7 +1658,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 40. 组合总和II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/combination/Solution40.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/combination/Solution40.java)
 
 #### 思路
 
@@ -1674,7 +1674,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 46. 全排列
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/arrangement/Solution46.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/arrangement/Solution46.java)
 
 #### 思路
 
@@ -1686,7 +1686,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 47. 全排列II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/arrangement/Solution47.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/arrangement/Solution47.java)
 
 #### 思路
 
@@ -1700,7 +1700,7 @@ deque 维护一个单调递减的队列，队列中存放的是元素在原数�
 
 ### 332. 重新安排行程 
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/arrangement/Solution332.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/arrangement/Solution332.java)
 
 #### 思路
 
@@ -1718,7 +1718,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 131.  分割回文串
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/partition/Solution131.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/partition/Solution131.java)
 
 #### 思路
 
@@ -1730,7 +1730,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 93. 复原IP地址
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/partition/Solution93.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/partition/Solution93.java)
 
 #### 思路
 
@@ -1746,7 +1746,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 78. 子集
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/subset/Solution78.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/subset/Solution78.java)
 
 #### 思路
 
@@ -1756,7 +1756,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 90. 子集II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/subset/Solution90.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/subset/Solution90.java)
 
 #### 思路
 
@@ -1764,7 +1764,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 491. 递增子序列
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/subset/Solution90.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/subset/Solution90.java)
 
 #### 思路
 
@@ -1782,7 +1782,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 51. N皇后 *
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/checkerboard/Solution51.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/checkerboard/Solution51.java)
 
 #### 思路
 
@@ -1802,7 +1802,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 37. 解数独
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Backtrack/src/main/java/com/xin/checkerboard/Solution37.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/07-Backtrack/src/main/java/com/xin/checkerboard/Solution37.java)
 
 #### 思路
 
@@ -1816,7 +1816,7 @@ DFS结束后，将机场添加到行程中。
 
 在`isValid`方法中，检查当前位置所在的行、列和3x3宫格是否满足数独规则。如果存在重复数字，则返回`false`，否则返回`true`。
 
-# 贪心算法
+# 08 - 贪心算法
 
 【注明】：这里的难易程度不是根据LeetCode上面来的，是根据能否通过常识来判断是否可以使用贪心算法。
 
@@ -1824,7 +1824,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 455. 分发饼干
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/easy/Solution455.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/easy/Solution455.java)
 
 #### 思路
 
@@ -1836,7 +1836,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 1005. K 次取反后最大化的数组和
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/easy/Solution1005.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/easy/Solution1005.java)
 
 ##### 思路
 
@@ -1848,7 +1848,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 860. 柠檬水找零
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/easy/Solution860.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/easy/Solution860.java)
 
 #### 思路
 
@@ -1866,7 +1866,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 376. 摆动序列
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/medium/Solution376.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/Solution376.java)
 
 ##### 思路
 
@@ -1878,7 +1878,7 @@ DFS结束后，将机场添加到行程中。
 
 ### 738. 单调递增的数字
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/medium/Solution738.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/Solution738.java)
 
 #### 思路
 
@@ -1894,7 +1894,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 122. 买卖股票的最佳时机 II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/medium/stock/Solution122.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/stock/Solution122.java)
 
 ##### 思路
 
@@ -1906,7 +1906,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 714. 买卖股票的最佳时机含手续费
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/medium/stock/Solution714.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/stock/Solution714.java)
 
 ##### 思路
 
@@ -1923,7 +1923,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 135. 分发糖果
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/medium/balance/Solution135.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/balance/Solution135.java)
 
 ##### 思路
 
@@ -1937,7 +1937,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 406. 根据身高重建队列
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/medium/balance/Solution406.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/medium/balance/Solution406.java)
 
 ##### 思路
 
@@ -1953,7 +1953,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 55. 跳跃游戏
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/interval/Solution55.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution55.java)
 
 ##### 思路
 
@@ -1967,7 +1967,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 45. 跳跃游戏II
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/interval/Solution45.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution45.java)
 
 ##### 思路
 
@@ -1981,7 +1981,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 452. 用最少数量的箭引爆气球
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/interval/Solution452.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution452.java)
 
 ##### 思路
 
@@ -1997,7 +1997,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 435. 无重叠区间
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/interval/Solution435.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution435.java)
 
 ##### 思路
 
@@ -2013,7 +2013,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 763. 划分字母区间
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/interval/Solution763.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution763.java)
 
 ##### 思路
 
@@ -2029,7 +2029,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 56. 合并区间
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/interval/Solution56.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/interval/Solution56.java)
 
 ##### 思路
 
@@ -2049,7 +2049,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 53.  最大子数组合
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/other/Solution53.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/other/Solution53.java)
 
 ##### 思路
 
@@ -2065,7 +2065,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 134. 加油站
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/other/Solution134.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/other/Solution134.java)
 
 ##### 思路
 
@@ -2077,7 +2077,7 @@ DFS结束后，将机场添加到行程中。
 
 #### 968. 监控二叉树
 
-[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/Greedy/src/main/java/com/xin/hard/other/Solution968.java)
+[代码链接](https://github.com/HappyAxin/Algorithm/blob/main/Algorithm/08-Greedy/src/main/java/com/xin/hard/other/Solution968.java)
 
 ##### 思路
 
@@ -2093,7 +2093,7 @@ DFS结束后，将机场添加到行程中。
 
 最后，返回摄像头的数量。
 
-# 动态规划
+# 09 - 动态规划
 
 ## 基础
 
