@@ -32,7 +32,7 @@ public class Solution213 {
      * @param end   范围结束
      * @return int
      */
-    private static int robRange(int[] nums, int start, int end) {
+    private int robRange(int[] nums, int start, int end) {
         int n = end - start + 1;
         if (n == 1) {
             return nums[start];
