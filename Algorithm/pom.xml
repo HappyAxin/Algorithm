@@ -19,6 +19,7 @@
         <module>07-Backtrack</module>
         <module>08-Greedy</module>
         <module>09-DynamicProgramming</module>
+        <module>10-MonotonicStack</module>
     </modules>
 
     <properties>
