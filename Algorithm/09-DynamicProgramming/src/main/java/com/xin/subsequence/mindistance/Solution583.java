@@ -1,4 +1,4 @@
-package com.xin.subsequence;
+package com.xin.subsequence.mindistance;
 
 /**
  * @author Hu·YX
