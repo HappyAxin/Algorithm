@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class Solution392 {
     public boolean isSubsequence(String s, String t) {
-        // 存储字符在 T 中的位置索引
+        // 存储字符在 t 中的位置索引
         Map<Character, List<Integer>> indexMap = new HashMap<>();
         // 构建索引
         for (int i = 0; i < t.length(); i++) {
@@ -24,7 +24,7 @@ public class Solution392 {
         // 检查是否为子序列
         for (char ch : s.toCharArray()) {
             if (! indexMap.containsKey(ch)) {
-                // 字符 ch 不在 T 中，无法匹配子序列
+                // 字符 ch 不在 t 中，无法匹配子序列
                 return false;
             }
             List<Integer> indices = indexMap.get(ch);
