@@ -12,30 +12,52 @@ import java.util.Map;
  */
 public class Solution392 {
     public boolean isSubsequence(String s, String t) {
-        int m = s.length();
-        int n = t.length();
-
-        // 定义状态数组
-        boolean[][] dp = new boolean[m + 1][n + 1];
-        // dp[i][j]表示s的前i个字符是否为t的前j个字符的子序列
-        for (int i = 0; i <= n; i++) {
-            // 空字符串是任何字符串的子序列
-            dp[0][i] = true;
+        // 存储字符在 T 中的位置索引
+        Map<Character, List<Integer>> indexMap = new HashMap<>();
+        // 构建索引
+        for (int i = 0; i < t.length(); i++) {
+            char ch = t.charAt(i);
+            indexMap.computeIfAbsent(ch, k -> new ArrayList<>()).add(i);
         }
+        // 记录前一个匹配的位置
+        int prevIndex = - 1;
+        // 检查是否为子序列
+        for (char ch : s.toCharArray()) {
+            if (! indexMap.containsKey(ch)) {
+                // 字符 ch 不在 T 中，无法匹配子序列
+                return false;
+            }
+            List<Integer> indices = indexMap.get(ch);
+            int pos = binarySearch(indices, prevIndex + 1);
+            if (pos == indices.size()) {
+                // 无法找到下一个匹配位置
+                return false;
+            }
+            // 更新前一个匹配的位置
+            prevIndex = indices.get(pos);
+        }
+        return true;
+    }
 
-        // 动态规划求解
-        for (int i = 1; i <= m; i++) {
-            for (int j = 1; j <= n; j++) {
-                if (s.charAt(i - 1) == t.charAt(j - 1)) {
-                    // 当前字符匹配，取前一个状态
-                    dp[i][j] = dp[i - 1][j - 1];
-                } else {
-                    // 当前字符不匹配，取当前状态的前一个状态
-                    dp[i][j] = dp[i][j - 1];
-                }
+    /**
+     * 二分查找，查找大于等于 target 的最小值所在的位置
+     *
+     * @param nums   目标List
+     * @param target 目标
+     * @return int
+     */
+    private static int binarySearch(List<Integer> nums, int target) {
+        int left = 0;
+        int right = nums.size() - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            int num = nums.get(mid);
+            if (num < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
             }
         }
-
-        return dp[m][n];
+        return left;
     }
 }
