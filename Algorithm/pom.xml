@@ -20,6 +20,7 @@
         <module>08-Greedy</module>
         <module>09-DynamicProgramming</module>
         <module>10-MonotonicStack</module>
+        <module>CodingInterviews</module>
     </modules>
 
     <properties>
@@ -34,18 +35,6 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
         </dependency>
     </dependencies>
 </project>

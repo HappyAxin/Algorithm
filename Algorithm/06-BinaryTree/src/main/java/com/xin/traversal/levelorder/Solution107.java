@@ -1,7 +1,6 @@
 package com.xin.traversal.levelorder;
 
 import com.xin.TreeNode;
-import edu.princeton.cs.algs4.In;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
