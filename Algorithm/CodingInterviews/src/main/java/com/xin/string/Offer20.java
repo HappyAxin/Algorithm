@@ -23,24 +23,24 @@ public class Offer20 {
         };
         int p = 0;
         char t;
-        for(char c : s.toCharArray()){
-            if(c >= '0' && c <= '9') {
+        for (char c : s.toCharArray()) {
+            if (c >= '0' && c <= '9') {
                 t = 'd';
-            } else if(c == '+' || c == '-') {
+            } else if (c == '+' || c == '-') {
                 t = 's';
-            } else if(c == 'e' || c == 'E') {
+            } else if (c == 'e' || c == 'E') {
                 t = 'e';
-            } else if(c == '.' || c == ',') {
+            } else if (c == '.' || c == ',') {
                 t = '.';
-            } else if(c == ' ') {
+            } else if (c == ' ') {
                 t = ' ';
             } else {
                 t = '?';
             }
-            if(!states[p].containsKey(t)) {
+            if (! states[p].containsKey(t)) {
                 return false;
             }
-            p = (int)states[p].get(t);
+            p = (int) states[p].get(t);
         }
         return p == 2 || p == 3 || p == 7 || p == 8;
     }
