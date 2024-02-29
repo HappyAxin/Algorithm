@@ -8,17 +8,24 @@ package com.xin.binarysearch;
  */
 public class Solution69 {
     public int mySqrt(int x) {
-        int low = 0, high = x, ans = 0;
-        while (low <= high) {
-            int middle = low + (high - low) >> 1;
-            if ((long)middle * middle <= x) {
-                ans = middle;
-                low = middle + 1;
-            } else  {
-                high = middle - 1;
+        if (x == 0) {
+            return 0;
+        }
+        // 定义二分查找的左右边界
+        long left = 1, right = x;
+        while (left < right) {
+            // 计算中点，这里采用left + (right - left + 1) / 2来防止溢出
+            // 并且这样计算可以让mid偏向右边，便于处理边界情况
+            long mid = left + (right - left + 1) / 2;
+            if (mid * mid > x) {
+                // 如果mid的平方大于x，说明真正的平方根在左边，调整right的值
+                right = mid - 1;
+            } else {
+                // 否则，平方根在右边，调整left的值
+                left = mid;
             }
         }
-        return ans;
-
+        // 循环结束后，left就是x的平方根的整数部分
+        return (int)left;
     }
 }
